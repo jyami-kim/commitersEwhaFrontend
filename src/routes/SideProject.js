@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-export class footer extends Component {
+export class SideProject extends Component {
     render() {
         return (
             <div>
-                <h1>footer</h1>
+               <h1>SideProject</h1> 
             </div>
         )
     }
 }
 
-export default footer
+export default SideProject
