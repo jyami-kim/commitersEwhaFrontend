@@ -1,0 +1,17 @@
+.main-container{
+    width: 100%;
+    height: 4105px;
+    display : flex;
+    flex-direction: column;
+   
+}
+.main-header{
+    flex : 1;
+}
+.main-body{
+    flex: 10;
+    background-color: aliceblue;
+}
+.main-footer{
+    flex :1;
+}

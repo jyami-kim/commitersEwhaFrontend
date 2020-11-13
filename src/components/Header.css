@@ -1,0 +1,37 @@
+.header-container {
+    display : flex;
+    justify-items: stretch;
+}
+.logo {
+    flex :1;
+}
+
+.header-nav{
+    flex :1;
+    display : flex;
+    /*background-color : yellow;*/
+}
+
+.nav-1{
+    flex :1;
+
+}
+.nav-2{
+    flex :1;
+
+}
+.nav-3{
+    flex :1;
+
+}
+.nav-4{
+    flex :1;
+  
+}
+.nav-5{
+    flex :1;
+}
+.nav-6{
+    flex :1;
+  
+}
