@@ -1,9 +1,14 @@
 .header-container {
     display : flex;
-    justify-items: stretch;
+    justify-items: center;
 }
 .logo {
     flex :1;
+    margin-left : 10em;
+    margin-right : 30em;
+}
+img{
+    max-width: 8em;
 }
 
 .header-nav{
