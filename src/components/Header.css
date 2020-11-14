@@ -10,6 +10,8 @@
     flex :1;
     display : flex;
     /*background-color : yellow;*/
+    font-family: AppleSDGothicNeo;
+    font-weight: 700;
 }
 
 .nav-1{
