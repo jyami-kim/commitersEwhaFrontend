@@ -6,9 +6,7 @@
     flex :1;
     margin-left : 10em;
     margin-right : 30em;
-}
-img{
-    max-width: 8em;
+    max-width : 6em;
 }
 
 .header-nav{

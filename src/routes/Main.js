@@ -1,20 +1,37 @@
-import React, { Component } from 'react'
+import React from 'react'
+import {Link} from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ProfileCard from '../components/ProfileCard'
 import './Main.css'
+import mainText from '.././assets/images/main_text_winter@3x.png'
 
-export class Main extends Component {
-    render() {
+const Main = () => {
+    
+    const INTRO_MESSAGE = "이화여자대학교 개발자를 위한 커밋 이화동산 커뮤니티입니다.\n꾸준한 커밋으로 겨울 정원사 뱃지를 취득하세요!";
+
         return (
             <div className = "main-container">
                <Header className="main-header"></Header>
                <div className = "main-body">
-                   <h1>main</h1>
+                   <Link to = "/">
+                        <img src={mainText} alt="always for ewha developers" className = "main-text"/>
+                   </Link>
+                   <div className = "intro-message">
+                        <NewlineText text = {INTRO_MESSAGE}/>
+                   </div>
+                   <ProfileCard />
                 </div>
                <Footer className="main-footer"></Footer>
             </div>
         )
-    }
 }
+
+function NewlineText(props) {
+    const text = props.text;
+    const styles = {lineHeight: "1.71", marginLeft: "9.5em" }
+    const newText = text.split('\n').map(str =><span className ="intro-message-text">{str}<br/></span>);
+    return newText;
+  }
 
 export default Main
