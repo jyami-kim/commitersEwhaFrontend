@@ -27,6 +27,7 @@ const Main = () => {
         )
 }
 
+
 function NewlineText(props) {
     const text = props.text;
     const styles = {lineHeight: "1.71", marginLeft: "9.5em" }

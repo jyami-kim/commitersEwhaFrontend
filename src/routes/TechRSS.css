@@ -1,0 +1,57 @@
+.tab-title {
+    font-family: AcuminProWide;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top: 20px;
+    color: #00462a;
+  }
+
+  .category-title {
+    font-family: AppleSDGothicNeo;
+    font-size: 28px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+  }
+
+.container{
+    width: 80%;
+    display : flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.sub-container{
+    width: 75%;
+    display : flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.row{
+    margin: 10px 0;
+}
+
+.tag{
+    line-height: 30px;
+    margin: 20px 5px 5px 0px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    word-break: break-word;
+    font-size: 12px;
+    background-color: #ededed;
+}
+
+
+.card-container{
+    margin-top: 50px;
+}

@@ -1,0 +1,78 @@
+.block-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.badge{
+    padding: 3px 9px 3px 8px;
+    border-radius: 5px;
+    background-color: #1ec800;
+    font-size: 12px;
+}
+
+.row{
+    margin: 10px 0;
+}
+
+.contents{
+    flex: 3
+}
+
+.image{
+    flex: 1
+}
+
+.title-text{
+    font-family: AppleSDGothicNeo;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+    margin-top: 10px;
+}
+
+.date-text{
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1ec800;
+}
+
+.description-text{
+    font-family: AppleSDGothicNeo;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+.imageNotFound{
+    width: 100%;
+    height: 100%;
+    margin: 16px 0 60px 40px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+
+.card-blank{
+    margin-top: 40px;
+}
