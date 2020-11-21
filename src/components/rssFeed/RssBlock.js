@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './RssBlock.css'
+import {Link} from 'react-router-dom'
 
 
 export class RssBlock extends Component {
@@ -7,29 +8,32 @@ export class RssBlock extends Component {
 
     render() {
         let imageBlock;
+        
         if (this.props.image != null) {
-            imageBlock = <img src= {this.props.image}></img>;
+            imageBlock = <img className= "image-box display-image" src={this.props.image} alt="대체 텍스트" />;
+            
           } else {
-            imageBlock = <div className="imageNotFound"></div>;
+            imageBlock = <div className="image-box block-image"></div>;
           }
 
         return (
-            // <div OnClick="location.href ='http://URL주소'" style="cursor:pointer;" >
-            <div className= "card-blank" href= {this.props.url}>
-                <div className = "row">
-                    <span className = "badge">{this.props.company}</span>
-                </div>
-                <div className = "row block-container">
-                    <div className = "contents">
-                        <div className = "title-text row">{this.props.title}</div>
-                        <div className = "date-text row">{this.props.date}</div>
-                        <div className = "description-text row">{this.props.description}</div>
+            <a href= {this.props.link} style={{ textDecoration: 'none' }}>
+                <div className= "card-blank">
+                    <div className = "row">
+                        <span className = "badge" style={{backgroundColor : this.props.color}}>{this.props.company}</span>
                     </div>
-                    <div className = "image">
-                        {imageBlock}
+                    <div className = "row block-container">
+                        <div className = "contents">
+                            <div className = "title-text">{this.props.title}</div>
+                            <div className = "date-text" style={{color : this.props.color}}>{this.props.date}</div>
+                            <div className = "description-text row">{this.props.description}</div>
+                        </div>
+                        <div className = "image">
+                            {imageBlock}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         )
     }
 }

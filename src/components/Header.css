@@ -1,6 +1,7 @@
 .header-container {
     display : flex;
     justify-items: center;
+    padding: 20px 0px;
 }
 .logo {
     flex :1;

@@ -7,18 +7,36 @@ import { json } from '../mock/rssMockData.js'
 
 export class TechRSS extends Component {
 
-    mock = {"color": "#6bd51e", "company" : "Naver D2", "title": "2020년과 이후 JavaScript의 동향 - WebAssembly", "date": "2020.10.01", 
-    "description" : "구글의 NaCI(Native Client), 모질라의 asm.js(JavaScript 서브셋) 등 네이티브 머신 코드를 웹으로 가져오기 위한, 그리고 빠르게 구글의 NaCI(Native Client), 모질라의 asm.js(JavaScript 서브셋) 등 네이티브 머신 코드를 웹으로 가져오기 위한, 그리고 빠르게 실행하기 위한 시도들은 결과적으로 웹어셈블리(이하 ‘wasm’으로 표기)로 귀결되었다고 ","image" : null}
-
     constructor(props) {
         super(props);
         this.state = {
-            mockData: json
+            mockData: json,
+            page: 0,
+            click: null
         };
+        this.tagClick = this.tagClick.bind(this);
+        this.page = this.page.bind(this);
     }
 
+    tagClick(company){
+        this.setState(status => ({
+            click: company,
+            page: 0
+        }))
+    }
+
+    page(pageIndex){
+        this.setState(status => ({
+            page: pageIndex
+        }))
+    }
 
     render() {
+
+        const dataToRender = this.state.mockData.rssFeedContents.filter(data => this.state.click == null || data.company == this.state.click)
+        const pageIndex = Math.ceil(dataToRender.length/10)
+
+
 
         return (
             <div className = "main-container">
@@ -32,21 +50,62 @@ export class TechRSS extends Component {
                             <span>Category</span>
                         </div>
                         <div>
-                            {this.state.mockData.map((data, i) => {
-                                return (<span className = "tag" key = {i}>{data.blogName}</span>);
+                            {this.state.mockData.rssFeedInfos.map((data, i) => {
+                                if(this.state.click == data.company){
+                                    return (
+                                        <div 
+                                        onClick={this.tagClick.bind(this, null)} 
+                                        className = "tag"
+                                        style= {{backgroundColor: data.color, color: "white"}}
+                                        key = {i}>{data.company}</div>
+                                    );
+                                }else{
+                                    return (
+                                        <div 
+                                        onClick={this.tagClick.bind(this, data.company)} 
+                                        className = "tag" 
+                                        style= {{backgroundColor: `#ededed`}}
+                                        key = {i}>{data.company}</div>
+                                    );
+                                }
+                                
                             })}
                         </div>
                         <div className= "card-container">
-                            <RssBlock color = {this.mock.color} company={this.mock.company} title={this.mock.title} date={this.mock.date} description = {this.mock.description} image={this.mock.image}/>
-                            <RssBlock color = {this.mock.color} company={this.mock.company} title={this.mock.title} date={this.mock.date} description = {this.mock.description} image={this.mock.image}/>
+                            {dataToRender.slice(this.state.page*10, (this.state.page+1) *10)
+                            .map((data, i) => {
+                                return (<RssBlock 
+                                    color = {data.color} 
+                                    company={data.company} 
+                                    title={data.title} 
+                                    date={data.date} 
+                                    description = {data.description} 
+                                    image= {data.image} 
+                                    link={data.link}/>);
+                            })}
                         </div>
                    </div>
+                   <div className = "pagenation">    
+                        {[...Array(pageIndex)].map((n, index) => {
+                            if(index == this.state.page){
+                                return (
+                                <div onClick={this.page.bind(this, index)} 
+                                    className = "page-number page-on">{index+1}
+                                </div>)
+                            }else{
+                                return (
+                                    <div onClick={this.page.bind(this, index)} 
+                                        className = "page-number page-off">{index+1}
+                                    </div>)
+                            }
+                        })}
+                    </div>
                </div>
-               
 
-            </div>        
+            </div>
         )
     }
+    
 }
 
 export default TechRSS
