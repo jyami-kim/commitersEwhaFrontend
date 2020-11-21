@@ -25,6 +25,18 @@
     url("./assets/fonts/AppleSDGothicNeoM.ttf") format("truetype");
 }
 
+.main-container{
+  width: 80%;
+  height: 4105px;
+  display : flex;
+  flex-direction: column;
+  margin: 0px auto;
+  align-items: left;
+  margin-top : 1em;
+  
+}
+
+
 .App {
   text-align: center;
 }

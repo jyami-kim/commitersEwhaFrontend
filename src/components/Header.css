@@ -1,42 +1,21 @@
-.header-container {
-    display : flex;
-    justify-items: center;
-}
-.logo {
-    flex :1;
-    margin-left : 10em;
-    margin-right : 30em;
-    max-width : 6em;
-}
-
 .header-nav{
-    flex :1;
+    position: absolute;
+    top : 1em;
+    right : 0%;
+    
     display : flex;
+    max-width: 60%;
+    text-align: center;
+    align-items: center;
     /*background-color : yellow;*/
     font-family: AppleSDGothicNeo;
     font-weight: 700;
+    z-index : 5;
+    
 }
 
-.nav-1{
+.header-nav > * {
     flex :1;
-
-}
-.nav-2{
-    flex :1;
-
-}
-.nav-3{
-    flex :1;
-
-}
-.nav-4{
-    flex :1;
-  
-}
-.nav-5{
-    flex :1;
-}
-.nav-6{
-    flex :1;
-  
+    min-width : 6.5em; 
+    margin-left : 1em;  
 }
