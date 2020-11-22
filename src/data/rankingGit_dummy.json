@@ -1,0 +1,25 @@
+[{
+    "rank" : 1,
+    "username" : "jane",
+    "point" : 1000
+},
+{
+	"rank": 2,
+	"username": "Latisha",
+	"point": 914
+},
+{
+	"rank": 3,
+	"username": "Elka",
+	"point": 931
+},
+{
+	"rank": 4,
+	"username": "Perry",
+	"point": 990
+},
+{
+	"rank": 5,
+	"username": "Elfreda",
+	"point": 961
+}]

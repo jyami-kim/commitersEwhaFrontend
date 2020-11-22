@@ -1,0 +1,18 @@
+.ranking-github-container{
+    height : 35em;
+    display: flex;
+    flex-direction: column;
+}
+.ranking-github-text{
+  font-family: AppleSDGothicNeo;
+  flex :1;
+  margin-bottom : 0em;
+  font-size: 16px;
+  font-weight: 800;
+  color: #888888;
+}
+.ranking-github-blocks-container{
+    flex :5;
+    display : flex;
+    flex-direction: row;
+}

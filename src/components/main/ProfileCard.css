@@ -1,0 +1,40 @@
+.profileCard-container{
+    background-color : #f7f7f7;
+    height: 20em;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 12.5%;
+    margin-left: -12.5%;
+    padding-right: 12.5%;
+    margin-right: -12.5%; 
+}
+  .profile-button-container{
+      flex : 1;
+      text-align: center;
+  }
+  .git-button{
+    width: 400px;
+    outline:none;
+    padding: 22px 139px 17px 140px;
+    border-radius: 1em;
+    border : none;
+    background-color: #00462a;
+    
+  }
+  .button-text{
+    font-family: AppleSDGothicNeo;
+    font-size: 18px;
+    font-weight : 700;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f7f7f7;
+  }
+  .profile-text{
+    font-family: AppleSDGothicNeo;
+    text-align : center;
+    font-weight: 500;
+    flex :1;
+  }

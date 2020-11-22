@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header-container {
     display : flex;
     justify-items: center;
@@ -10,34 +11,26 @@
     max-width : 6em;
 }
 
+=======
+>>>>>>> 80d5a0f2861615c772b852d5d46bedc3d80b35e9
 .header-nav{
-    flex :1;
+    position: absolute;
+    top : 1em;
+    right : 0em;
+    
     display : flex;
+    max-width: 60%;
+    text-align: center;
+    align-items: center;
     /*background-color : yellow;*/
     font-family: AppleSDGothicNeo;
     font-weight: 700;
+    z-index : 5;
+    
 }
 
-.nav-1{
+.header-nav > * {
     flex :1;
-
-}
-.nav-2{
-    flex :1;
-
-}
-.nav-3{
-    flex :1;
-
-}
-.nav-4{
-    flex :1;
-  
-}
-.nav-5{
-    flex :1;
-}
-.nav-6{
-    flex :1;
-  
+    min-width : 6.5em; 
+    margin-left : 1em;  
 }

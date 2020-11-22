@@ -2,13 +2,17 @@ img{
     height: auto;
     object-fit: contain;
 }
+.logo {
+    z-index: 0;
+    max-width : 6em;
+}
 .intro-message{
     margin-top : 3em;    
     margin-bottom: 6em;
 }
 .intro-message-text {
     line-height: 1.71;
-    margin-left: 11em;
+    
     font-family: AppleSDGothicNeo;
     font-size: 14px;
     font-weight: 500;
@@ -18,26 +22,35 @@ img{
     color: #151515;
 }
 
-.main-text{
+.main-text-image{
     max-width: 15em;
-    margin-left : 9em;
     margin-top : 9em;
 }
-
-.main-container{
-    width: 100%;
-    height: 4105px;
-    display : flex;
-    flex-direction: column;
-   
-}
-.main-header{
+.main-subtitle-text {
+    margin-top : 3em;
+    margin-bottom : 0em;
     flex : 1;
+    /*font-family: AcuminProWide;*/
+    font-size: 12px;
+    font-weight: 700;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2b2b2b;
+  }
+
+
+.main-header{
+    height: 4.5em;
+    width : 100%;
+    z-index: -1;
+    
 }
 .main-body{
     flex: 10;
     display : flex;
     flex-direction: column;
+    
 }
 .main-footer{
     flex :1;

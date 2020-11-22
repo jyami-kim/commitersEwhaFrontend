@@ -1,0 +1,10 @@
+.github-ranking-block{
+    width : 8em;
+    height : 11.25em;
+    margin-right : 0.25em;
+    border-width : 1px;
+    background-color: #f7f7f7;
+}
+.background-yellow{
+    background-color: rgba(251, 177, 9, 0.08);
+}
