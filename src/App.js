@@ -10,14 +10,16 @@ import Community from './routes/Community'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route path = "/" exact = {true} component ={Main}/>
-      <Route path = "/MyProfile" component ={MyProfile}/>
-      <Route path = "/Ranking" component ={Ranking}/>
-      <Route path = "/SideProject" component ={SideProject}/>
-      <Route path = "/TechRSS" component ={TechRSS}/> 
-      <Route path = "/Community" component ={Community}/> 
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Route path = "/" exact = {true} component ={Main}/>
+        <Route path = "/MyProfile" component ={MyProfile}/>
+        <Route path = "/Ranking" component ={Ranking}/>
+        <Route path = "/SideProject" component ={SideProject}/>
+        <Route path = "/TechRSS" component ={TechRSS}/> 
+        <Route path = "/Community" component ={Community}/> 
+      </BrowserRouter>
+    </div>
   );
 }
 

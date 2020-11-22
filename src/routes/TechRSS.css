@@ -1,0 +1,94 @@
+.tab-title {
+    font-family: AcuminProWide;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top: 20px;
+    color: #00462a;
+  }
+
+  .category-title {
+    font-family: AppleSDGothicNeo;
+    font-size: 28px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+  }
+
+.container{
+    width: 80%;
+    display : flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.sub-container{
+    width: 75%;
+    display : flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.row{
+    margin: 10px 0;
+}
+
+.tag{
+    display: inline-block;
+    margin: 5px 5px 5px 0px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    word-break: break-word;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+.card-container{
+    margin-top: 30px;
+}
+
+.pagenation{
+    margin-top: 100px;
+    display : flex;
+    justify-content: center
+}
+
+.page-number{
+    margin: 12px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    font-weight: 800;
+}
+
+.page-on{
+    color: #2b2b2b;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.page-off{
+    color: #e0e0e0;
+}
