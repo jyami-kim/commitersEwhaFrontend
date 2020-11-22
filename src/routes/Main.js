@@ -6,7 +6,6 @@ import ProfileCard from '../components/main/ProfileCard'
 import RankingGithub from '../components/main/RankingGithub'
 import './css/Main.css'
 import mainText from '.././assets/images/main_text_winter@3x.png'
-import logo from '../assets/logo/logo_winter@3x.png'
 
 const Main = () => {
     
@@ -16,7 +15,6 @@ const Main = () => {
             <div>
                 <Header className="main-header"></Header>
             <div className = "main-container">
-               <img src={logo} alt="logo winter" className = "logo"/>
                <div className = "main-body">
                    <Link to = "/">
                         <img src={mainText} alt="always for ewha developers" className = "main-text-image"/>

@@ -1,10 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './Header.css'
+import logo from '../assets/logo/logo_winter@3x.png'
+
 
 const Header = () => {
     return(
             <div className="header-nav">
+                <Link to = "/" className="logo-box"><img src={logo} alt="logo winter" className = "logo"/></Link>
                 <Link to = "/Ranking">이화랭킹</Link>
                 <Link to = "/Community">커뮤니티</Link>
                 <Link to = "/SideProject">사이드 프로젝트</Link>

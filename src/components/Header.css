@@ -4,6 +4,9 @@
     padding: 20px 0px;
 }
 .logo {
+    max-width : 6em;
+}
+.logo-box {
     flex :1;
     margin-left : 10em;
     margin-right : 30em;
@@ -15,7 +18,6 @@
     right : 0em;
     
     display : flex;
-    max-width: 60%;
     text-align: center;
     align-items: center;
     /*background-color : yellow;*/

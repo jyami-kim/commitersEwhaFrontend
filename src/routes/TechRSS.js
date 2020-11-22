@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from '../components/Header'
 import RssBlock from '../components/rssFeed/RssBlock'
 import './TechRSS.css'
-import './Main.css'
+import './css/Main.css'
 import { json } from '../mock/rssMockData.js'
 
 export class TechRSS extends Component {
