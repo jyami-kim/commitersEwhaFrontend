@@ -1,10 +1,11 @@
 import React from 'react'
 import './ProfileCard.css'
+import styles from '../../routes/css/Main.module.css'
 
 const ProfileCard =() => {
     return(
         <div className = "profileCard-container">
-            <div className = "main-subtitle-text">MY PROFILE</div>
+            <div className = {styles.mainSubtitleText}>MY PROFILE</div>
             <div className ="profile-button-container">
                 <button onClick ={getGithub} className = "git-button"> 
                    <div className ="button-text">Github 연동하기</div>

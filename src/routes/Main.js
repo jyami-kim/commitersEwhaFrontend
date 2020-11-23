@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProfileCard from '../components/main/ProfileCard'
 import RankingGithub from '../components/main/RankingGithub'
-import './css/Main.css'
+import styles from './css/Main.module.css'
 import mainText from '.././assets/images/main_text_winter@3x.png'
 
 const Main = () => {
@@ -13,19 +13,19 @@ const Main = () => {
 
         return (
             <div>
-                <Header className="main-header"></Header>
+                <Header className="main-header"></Header>i
             <div className = "main-container">
-               <div className = "main-body">
+               <div className = {styles.mainBody}>
                    <Link to = "/">
-                        <img src={mainText} alt="always for ewha developers" className = "main-text-image"/>
+                        <img src={mainText} alt="always for ewha developers" className = {styles.mainTextImage}/>
                    </Link>
-                   <div className = "intro-message">
+                   <div className = {styles.introMessage}>
                         <NewlineText text = {INTRO_MESSAGE}/>
                    </div>
                    <ProfileCard />
                    <RankingGithub />
                 </div>
-               <Footer className="main-footer"></Footer>
+               <Footer className={styles.mainFooter}></Footer>
             </div>
             </div>
         )

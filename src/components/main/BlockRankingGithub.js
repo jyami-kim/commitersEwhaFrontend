@@ -1,18 +1,18 @@
 import React from 'react'
-import './BlockRankingGithub.css'
+import styles from'./BlockRankingGithub.module.css'
 import PropTypes from 'prop-types'
 
-//id로 색깔 
-
 const BlockRankingGithub = (props) => {
+
   const {ranking, username, point} = props;
+  const blockclass = ranking < 4 ? styles.containerYellow : styles.containerGray;
 
   return (
-    <div className = "github-ranking-block">
-      <div>{ranking}등</div>
-      <div>프로필</div>
-      <div>{username}</div>
-      <div>{point}점</div>
+    <div className = {blockclass}>
+      <div >{ranking}등</div>
+      <div className = {styles.profile} >프로필</div>
+      <div className = {styles.usernameText}>{username}</div>
+      <div className = {styles.pointText}>{point}점</div>
     </div>
   )
 }

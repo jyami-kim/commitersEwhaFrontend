@@ -6,11 +6,11 @@ img{
     z-index: 0;
     max-width : 6em;
 }
-.intro-message{
+.introMessage{
     margin-top : 3em;    
     margin-bottom: 6em;
 }
-.intro-message-text {
+.introMessageText {
     line-height: 1.71;
     
     font-family: AppleSDGothicNeo;
@@ -22,11 +22,11 @@ img{
     color: #151515;
 }
 
-.main-text-image{
+.mainTextImage{
     max-width: 15em;
     margin-top : 9em;
 }
-.main-subtitle-text {
+.mainSubtitleText {
     margin-top : 3em;
     margin-bottom : 0em;
     flex : 1;
@@ -40,18 +40,18 @@ img{
   }
 
 
-.main-header{
+.mainHeader{
     height: 4.5em;
     width : 100%;
     z-index: -1;
     
 }
-.main-body{
+.mainBody{
     flex: 10;
     display : flex;
     flex-direction: column;
     
 }
-.main-footer{
+.mainFooter{
     flex :1;
 }

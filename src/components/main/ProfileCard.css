@@ -12,6 +12,7 @@
   .profile-button-container{
       flex : 1;
       text-align: center;
+      align-: center;
   }
   .git-button{
     width: 400px;

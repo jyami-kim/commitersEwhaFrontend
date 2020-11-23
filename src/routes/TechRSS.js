@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from '../components/Header'
 import RssBlock from '../components/rssFeed/RssBlock'
 import './TechRSS.css'
-import './css/Main.css'
+import styles from './css/Main.module.css'
 import { json } from '../mock/rssMockData.js'
 
 export class TechRSS extends Component {
@@ -40,7 +40,7 @@ export class TechRSS extends Component {
 
         return (
             <div className = "main-container">
-               <Header className="main-header"></Header>
+               <Header className= {styles.mainHeader}></Header>
                <div className = "container">
                    <div className = "sub-container">
                         <div className = "tab-title">
