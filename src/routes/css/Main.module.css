@@ -27,8 +27,8 @@ img{
     margin-top : 9em;
 }
 .mainSubtitleText {
-    margin-top : 3em;
-    margin-bottom : 0em;
+    margin-top : 4em;
+    margin-bottom : auto;
     flex : 1;
     /*font-family: AcuminProWide;*/
     font-size: 12px;
