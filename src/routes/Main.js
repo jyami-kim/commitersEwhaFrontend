@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProfileCard from '../components/main/ProfileCard'
 import RankingGithub from '../components/main/RankingGithub'
+import RankingBaekjun from '../components/main/RankingBaekjun.js'
 import styles from './css/Main.module.css'
 import mainText from '.././assets/images/main_text_winter@3x.png'
 
@@ -24,6 +25,7 @@ const Main = () => {
                    </div>
                    <ProfileCard />
                    <RankingGithub />
+                   <RankingBaekjun />
                 </div>
                <Footer className={styles.mainFooter}></Footer>
             </div>
@@ -34,6 +36,7 @@ const Main = () => {
 
 function NewlineText(props) {
     const text = props.text;
+    
     //const styles = {lineHeight: "1.71", marginLeft: "9.5em" }
     const newText = text.split('\n').map((str, index) =><span key = {index} className ="intro-message-text">{str}<br/></span>);
     return newText;

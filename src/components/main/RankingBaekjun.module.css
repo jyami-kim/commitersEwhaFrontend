@@ -1,0 +1,77 @@
+text {
+    flex : 1;
+    font-family: AppleSDGothicNeo;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: left;
+    color: #151515;
+}
+
+.container{
+    display : flex;
+    flex-direction: row;
+}
+
+.insideContainer{
+    border: 0.1em solid;
+    width : 100%;
+    height : 7.5em;
+    margin-right : 1.5em;
+    border-color: #d5d5d5;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.insideContainerRow{
+    border: 0.1em solid;
+    width : 100%;
+    height : 7.5em;
+    margin-right : 1.5em;
+    border-color: #d5d5d5;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.infoBox{
+    flex :1;
+    border-bottom: 0.1em solid;
+    border-color: #d5d5d5;
+    display : flex;
+    flex-direction: row;
+}
+
+.infoBoxNoBorder{
+    flex :1;
+    display : flex;
+    flex-direction: row;
+   
+}
+
+.titleText{
+    font-family: AppleSDGothicNeo;
+
+    margin-bottom : 0em;
+    margin-top : 0.5em;
+    font-size: 16px;
+    font-weight: 800;
+    color: #888888;
+}
+
+.textRank {
+    text-align: right;
+    font-family: AppleSDGothicNeo;
+    font-size: 5em;
+    font-weight: bold;
+    color: #00462a;
+}
+
+.textNumber{
+   font-family: AppleSDGothicNeo;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  color: #00462a;
+}

@@ -1,0 +1,18 @@
+.container{
+    display : flex;
+    flex-direction: row;
+}
+
+.containerGray{
+    display: flex;
+    flex-direction: row;
+    width : 15.125em;
+    height : 4.5em;
+    margin-right : 0.25em;
+    border-width : 1px;
+    background-color: #f7f7f7;
+    text-align: center;
+    font-family: AppleSDGothicNeo;
+    font-weight: 800;
+    
+}
