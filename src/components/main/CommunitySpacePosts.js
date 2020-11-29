@@ -36,10 +36,6 @@ const CommunitySpacePosts = ({posts, loading}) => {
                         </div>
                     ))} 
             </div>
-
-            
-
-
         </div>
     )
 }

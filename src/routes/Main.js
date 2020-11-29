@@ -6,6 +6,8 @@ import ProfileCard from '../components/main/ProfileCard'
 import RankingGithub from '../components/main/RankingGithub'
 import RankingBaekjun from '../components/main/RankingBaekjun.js'
 import CommunitySpace from '../components/main/CommunitySpace.js'
+import CommunitySideProject from '../components/main/CommunitySideProject.js'
+import InfoTechRss from '../components/main/InfoTechRss'
 import styles from './css/Main.module.css'
 import mainText from '.././assets/images/main_text_winter@3x.png'
 
@@ -24,10 +26,12 @@ const Main = () => {
                    <div className = {styles.introMessage}>
                         <NewlineText text = {INTRO_MESSAGE}/>
                    </div>
-                   <ProfileCard />
-                   <RankingGithub />
-                   <RankingBaekjun />
-                   <CommunitySpace />
+                    <ProfileCard />
+                    <RankingGithub />
+                    <RankingBaekjun />
+                    <CommunitySpace />
+                    <CommunitySideProject />
+                    <InfoTechRss />
                 </div>
                <Footer className={styles.mainFooter}></Footer>
             </div>
