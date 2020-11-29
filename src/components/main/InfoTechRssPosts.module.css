@@ -1,0 +1,16 @@
+.container{
+    display :flex;
+    flex-direction :row;
+    width: 100%;
+    overflow: auto;
+}
+.container::-webkit-scrollbar{
+    /*width : 100%;*/
+}
+.postCard{
+    min-width: 23.625em;
+    height: 12.5em; 
+    margin: 0 1.5em 0 0;
+    border-radius: 0.625em;
+    background-color: #f7f7f7;
+}

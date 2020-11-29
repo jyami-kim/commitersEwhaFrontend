@@ -18,8 +18,7 @@ const BlockWeather = ({blocks,loading}) => {
   }
 
   return (
-
-    <div className = {styles.container}>
+      <div className ={styles.scroll}>
       {blocks.map(block => (
         <div key = {block.id} className = {block.id < 4 ? styles.containerYellow : styles.containerGray}>
           <div>{block.id}등</div>
@@ -28,7 +27,7 @@ const BlockWeather = ({blocks,loading}) => {
           <div className = {styles.pointText}>{block.userID}점수</div>
         </div>
       ))}
-    </div>
+      </div>
   )
 } 
 

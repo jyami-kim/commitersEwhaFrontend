@@ -1,11 +1,18 @@
-.container{
+.scroll{
     display : flex;
     flex-direction: row;
+    width : 100%;
+    height : 100%;
+    overflow-x : auto;
+  
+  
 }
-
+.scroll::-webkit-scrollbar{
+  /* width :0;*/
+}
 .containerGray{
-    width : 8em;
-    height : 11.25em;
+    min-width: 138px;
+    height: 179px;
     margin-right : 0.25em;
     border-width : 1px;
     background-color: #f7f7f7;
@@ -15,8 +22,8 @@
     
 }
 .containerYellow{
-    width : 8em;
-    height : 11.25em;
+    min-width : 8.625em;
+    height : 11.1875em;
     margin-right : 0.25em;
     border-width : 1px;
     background-color: rgba(251, 177, 9, 0.08);

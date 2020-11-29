@@ -18,23 +18,23 @@ const Main = () => {
         return (
             <div>
                 <Header className="main-header"></Header>
-            <div className = "main-container">
-               <div className = {styles.mainBody}>
-                   <Link to = "/">
-                        <img src={mainText} alt="always for ewha developers" className = {styles.mainTextImage}/>
-                   </Link>
-                   <div className = {styles.introMessage}>
-                        <NewlineText text = {INTRO_MESSAGE}/>
-                   </div>
-                    <ProfileCard />
-                    <RankingGithub />
-                    <RankingBaekjun />
-                    <CommunitySpace />
-                    <CommunitySideProject />
-                    <InfoTechRss />
+                <div className = "main-container">
+                <div className = {styles.mainBody}>
+                    <Link to = "/">
+                            <img src={mainText} alt="always for ewha developers" className = {styles.mainTextImage}/>
+                    </Link>
+                    <div className = {styles.introMessage}>
+                            <NewlineText text = {INTRO_MESSAGE}/>
+                    </div>
+                        <ProfileCard />
+                        <RankingGithub />
+                        <RankingBaekjun />
+                        <CommunitySpace />
+                        <CommunitySideProject />
+                        <InfoTechRss />
+                    </div>
+                <Footer className={styles.mainFooter}></Footer>
                 </div>
-               <Footer className={styles.mainFooter}></Footer>
-            </div>
             </div>
         )
 }

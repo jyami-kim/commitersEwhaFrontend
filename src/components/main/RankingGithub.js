@@ -3,7 +3,6 @@ import styles from './RankingGithub.module.css'
 import BlockWeather from './BlockWeather'
 import BlockWeek from './BlockWeek'
 import axios from 'axios';
-import Pagination from '../Pagination'
 
 
 
@@ -16,7 +15,9 @@ const RankingGithub = () => {
     const [blocks, setBlocks] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentLine, setCurrentLine] = useState(1)
-    const [blocksPerLine] = useState(6);
+    const [blocksPerLine] = useState(35);
+    //나중에는 아예 나눠서 다른 api에서 받와야함
+
 
     useEffect(() => {
         const fetchBlocks = async () => {
@@ -33,7 +34,6 @@ const RankingGithub = () => {
     const indexOfLastBlock = currentLine * blocksPerLine ;
     const indexOfFirstBlock = indexOfLastBlock - blocksPerLine;
     const currentBlocks = blocks.slice(indexOfFirstBlock, indexOfLastBlock);
-
     //paginate
     const paginate = (lineNumber) => setCurrentLine(lineNumber)
 
@@ -45,10 +45,6 @@ const RankingGithub = () => {
             <div className = {styles.blocksContainer}>
                 <BlockWeather blocks = {currentBlocks} loading = {loading}/>
             </div>
-            <div className ={styles.paginationContainer}>
-                <Pagination postsPerPage ={blocksPerLine} totalPosts ={blocks.length} style ={styles.number} paginate ={paginate}/>
-            </div>
-
              <div>{/* 여기서부터 week*/}</div>
 
             <div className = {styles.rankingGithubText}>{WEEK_TITLE}</div>
