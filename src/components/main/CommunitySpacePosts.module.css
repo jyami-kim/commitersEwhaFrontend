@@ -1,0 +1,54 @@
+.container{
+    display :flex;
+    flex-direction : column;
+
+}
+
+.postsContainer{
+    display : flex;
+    flex-direction : row;
+}
+
+.post{
+    width : 100%;
+    height : 50%;
+    padding-bottom: 2.25em;
+    margin-right: 3em;
+    display : flex;
+    flex-direction: column;
+}
+
+.tagContainer{
+    display : flex;
+    flex-direction: row;
+}
+
+.tagYellow{
+    width: auto;
+    height: auto;
+    padding: 0.25px 0.5em;
+    margin-right :0.25em;
+    border-radius:0.3125em;
+    border: solid 0.0625em#fbb109;
+    background-color: #fcd274;
+    text-align : center;
+    color: #ffffff;
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tagGreen{
+    width: auto;
+    height: auto;
+    padding: 0.25px 0.5em; 
+    margin-right :0.25em;
+    border-radius:0.3125em;
+    border: solid 0.0625em #00462a;
+    background-color: #5f8276;
+    text-align : center;
+    color: #ffffff;
+    font-family: AppleSDGothicNeo;
+    font-size: 12px;
+    font-weight: bold;
+}

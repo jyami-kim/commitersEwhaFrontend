@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import ProfileCard from '../components/main/ProfileCard'
 import RankingGithub from '../components/main/RankingGithub'
 import RankingBaekjun from '../components/main/RankingBaekjun.js'
+import CommunitySpace from '../components/main/CommunitySpace.js'
 import styles from './css/Main.module.css'
 import mainText from '.././assets/images/main_text_winter@3x.png'
 
@@ -14,7 +15,7 @@ const Main = () => {
 
         return (
             <div>
-                <Header className="main-header"></Header>i
+                <Header className="main-header"></Header>
             <div className = "main-container">
                <div className = {styles.mainBody}>
                    <Link to = "/">
@@ -26,6 +27,7 @@ const Main = () => {
                    <ProfileCard />
                    <RankingGithub />
                    <RankingBaekjun />
+                   <CommunitySpace />
                 </div>
                <Footer className={styles.mainFooter}></Footer>
             </div>
