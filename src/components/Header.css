@@ -1,7 +1,9 @@
 .header-container {
+    margin: auto;
     display : flex;
     justify-items: center;
-    align-text:center;
+    align-items: center;
+    width : 80%;
 }
 .logo {
     max-width : 6em;
@@ -9,20 +11,16 @@
 .logo-box {
     flex :1;
     max-width : 6em;
+    margin: auto auto auto 0em;
 }
 .header-nav{
-    position: absolute;
-    top : 1em;
-    right : 0em;
-    
+    margin: auto 0em auto auto;
     display : flex;
     text-align: center;
     align-items: center;
     /*background-color : yellow;*/
     font-family: AppleSDGothicNeo;
     font-weight: 700;
-    z-index : 5;
-    
 }
 
 .header-nav > * {

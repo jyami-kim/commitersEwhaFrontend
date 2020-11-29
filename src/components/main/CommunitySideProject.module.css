@@ -12,7 +12,7 @@
 .titleText{
     font-family: AcuminProWide;
     height : 0.875em;
-    
+    margin: 3.75em auto auto 0em; 
     padding-bottom: 2.125em;
     font-size: 12px;
     font-weight: bold;

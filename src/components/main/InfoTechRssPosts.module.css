@@ -2,15 +2,62 @@
     display :flex;
     flex-direction :row;
     width: 100%;
-    overflow: auto;
+    height : 100%;
+    overflow-x: auto;
 }
 .container::-webkit-scrollbar{
     /*width : 100%;*/
 }
+
+.textTitle{
+  overflow-wrap: break-word;
+    width: 100%;
+    margin: 1em auto auto 1em;
+    font-family: AppleSDGothicNeo;
+    font-size: 1em;
+    font-weight: bold;
+  
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+}
+
 .postCard{
-    min-width: 23.625em;
-    height: 12.5em; 
+    min-width: 18.9em;
+    height: 10em;
     margin: 0 1.5em 0 0;
-    border-radius: 0.625em;
+    border-radius:  0.5em;
     background-color: #f7f7f7;
+    overflow-wrap: break-word;
+}
+.company{
+  width: 4.0625em;
+  height: 1.1875em;
+  margin: 1.25em auto auto 1em;
+  padding: 3px 9px ;
+  border-radius: 0.3125em;
+  background-color: #6bd51e;
+  font-family: AppleSDGothicNeo;
+  font-size: 0.75em;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  color: #ffffff;
+}
+
+.date{
+  width: 174px;
+  height: 13px;
+  margin: 1.25em auto 0 1em;
+  font-family: AppleSDGothicNeo;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1ec800;
 }

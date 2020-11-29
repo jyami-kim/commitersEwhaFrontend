@@ -9,13 +9,15 @@ const InfoTechRssPosts = ({posts, loading}) => {
         <div className = {styles.container}>
             {posts.map(post => (
                 <div key ={post.id} className = {styles.postCard}>
-                    <div>회사이름</div>
-                    <text>{post.title}</text>
-                    <text>2020.10.21</text>
+                    <div className ={styles.company}>회사이름</div>
+                    <div className ={styles.textTitle}>{post.title.length > 30 ? post.title.slice(0,30) : post.title}</div>
+                    <div className ={styles.date}>2020.10.21</div>
                 </div>
             ))}
         </div>
     )
 }
+
+
 
 export default InfoTechRssPosts;

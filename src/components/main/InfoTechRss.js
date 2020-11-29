@@ -23,7 +23,7 @@ const InfoTechRss = () => {
        <div className = {styles.container}>
             <div className = {styles.titleText}>EWHA INFO | Tech Rss</div>
             <InfoTechRssPosts posts = {posts} loading ={loading} />
-        </div   >
+        </div>
     )
 }
 
