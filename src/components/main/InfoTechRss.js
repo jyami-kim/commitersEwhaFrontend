@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import InfoTechRssPosts from './InfoTechRssPosts'
-import styles from './InfoTechRss.module.css'
+import styles from './MainComponents.module.css'
 
 const InfoTechRss = () => {
     const [posts , setPosts] = useState([]);

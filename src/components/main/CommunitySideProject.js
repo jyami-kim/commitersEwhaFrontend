@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import CommunitySideProjectPosts from './CommunitySideProjectPosts'
-import styles from './CommunitySideProject.module.css'
+import styles from './MainComponents.module.css'
 
 const CommunitySideProject = () => {
     const [posts , setPosts] = useState([]);

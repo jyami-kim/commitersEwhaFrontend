@@ -1,0 +1,46 @@
+
+.container{
+    background-color : #00462a;
+    height : 20.8125em;
+    margin-right : -12.5%;
+    padding-right : 12.5%;
+    margin-left : -12.5%;
+    padding-left : 12.5%;
+
+    display: flex;
+    flex-direction : row; 
+}
+.itemBox{
+    width : 21.75em;
+    margin-top : 3.75em;
+    font-family: AppleSDGothicNeo;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f7f7f7;
+}
+.itemBoxLarge{
+    width : 42.5em;
+    margin-top : 3.75em;
+    font-family: AppleSDGothicNeo;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f7f7f7;
+}
+
+.logo{
+    max-width : 6.0625em;
+}
+
+.title{
+    margin: 0em auto 3.3125em 0em;
+    font-family: AcuminProWide;
+    font-size: 0.75em;
+}
+.copyright{
+    margin: 7em auto auto 0em;
+    color: #b3c3be;
+}

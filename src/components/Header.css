@@ -1,9 +1,11 @@
 .header-container {
-    margin: auto;
+    margin: auto 0em;
     display : flex;
+    height :  4.5em;
     justify-items: center;
     align-items: center;
-    width : 80%;
+    width : 100%;
+    
 }
 .logo {
     max-width : 6em;
@@ -21,10 +23,21 @@
     /*background-color : yellow;*/
     font-family: AppleSDGothicNeo;
     font-weight: 700;
+
+    font-size: 1em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: right;
+    color: #2b2b2b;
+
 }
 
 .header-nav > * {
     flex :1;
-    min-width : 6.5em; 
-    margin-left : 1em;  
+    width :fit-content; 
+    margin-left : 3em;
+    white-space: nowrap;  
 }

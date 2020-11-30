@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import styles from './CommunitySpace.module.css'
+import styles from './MainComponents.module.css'
 import CommunitySpacePosts from './CommunitySpacePosts'
 
 const CommunitySpace = () => {
