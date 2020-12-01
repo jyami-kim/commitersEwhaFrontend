@@ -30,9 +30,8 @@
   height: 100%;
   display : flex;
   flex-direction: column;
-  margin: 0px auto;
+  margin: 0em auto;
   align-items: left;
-  margin-top : 1em;
   
 }
 

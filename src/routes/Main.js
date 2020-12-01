@@ -18,7 +18,7 @@ const Main = () => {
 
         return (
             <div className = "main-container">
-                <Header className="main-header"></Header>
+                <Header></Header>
                 <div className = {styles.mainBody}>
                     <Link to = "/">
                             <img src={mainText} alt="always for ewha developers" className = {styles.mainTextImage}/>

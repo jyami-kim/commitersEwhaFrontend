@@ -2,8 +2,6 @@
     margin: auto 0em;
     display : flex;
     height :  4.5em;
-    justify-items: center;
-    align-items: center;
     width : 100%;
     
 }
@@ -16,10 +14,9 @@
     margin: auto auto auto 0em;
 }
 .header-nav{
-    margin: auto 0em auto auto;
+    margin: 1.875em 0em 0em auto;
+    height : fit-content;
     display : flex;
-    text-align: center;
-    align-items: center;
     /*background-color : yellow;*/
     font-family: AppleSDGothicNeo;
     font-weight: 700;
@@ -37,7 +34,8 @@
 
 .header-nav > * {
     flex :1;
-    width :fit-content; 
-    margin-left : 3em;
+    width :fit-content;
+    height: fit-content; 
+    margin :0em 0em 0em 3em;
     white-space: nowrap;  
 }

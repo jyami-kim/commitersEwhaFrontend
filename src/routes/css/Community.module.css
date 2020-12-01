@@ -1,0 +1,9 @@
+img{
+    height: auto;
+    object-fit: contain;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+}
