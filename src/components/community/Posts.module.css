@@ -1,0 +1,59 @@
+.conatiner{
+    width : 56.5rem;
+    display : flex;
+    flex-direction: column;
+}
+
+.postBox{
+    width : 56.5rem;
+    border-top: solid  0.1rem ;
+    border-color : #ededed;
+    padding-top : 1.75rem ; 
+    padding-bottom: 1.75rem;
+}
+.infoText{
+    font-family: AppleSDGothicNeo;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #888888;
+}
+.titleText{
+    font-family: AppleSDGothicNeo;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+}
+.bodyText{
+    font-family: AppleSDGothicNeo;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #888888;
+}
+.itemBox{
+    height: 1rem;
+    margin: auto 0rem auto auto;
+    font-family: AppleSDGothicNeo;
+    font-size: 1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: right;
+    color: #5f8276;
+}

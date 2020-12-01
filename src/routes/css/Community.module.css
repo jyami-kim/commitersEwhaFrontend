@@ -1,3 +1,12 @@
+.container{
+        width: 80%;
+        height: 100%;
+        display : flex;
+        flex-direction: column;
+        margin: 0em auto 7.75em auto;
+        align-items: left;
+}
+
 img{
     height: auto;
     object-fit: contain;
@@ -6,4 +15,80 @@ img{
 .nav{
     display: flex;
     flex-direction: row;
+
+    font-family: AppleSDGothicNeo;
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+
+    padding-bottom : 4.5rem;
+   
+}
+.navNow{
+    color : #151515;
+    width :fit-content;
+    height: fit-content;  
+    margin :0em 3.75rem 0em 0em;
+    white-space: nowrap; 
+}
+
+.navDefault {
+    color: #e0e0e0;
+    width :fit-content;
+    height: fit-content;  
+    margin :0em 3.75rem 0em 0em;
+    white-space: nowrap; 
+}
+
+.subtitle{
+    margin: 4.8125rem auto auto 0em;
+    font-family: AcuminProWide;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00462a;
+}
+.title{
+    margin: 1.25rem auto 4.5rem 0em;
+    font-family: AppleSDGothicNeo;
+    font-size: 1.75em;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+
+    display : flex;
+    flex-direction : row;
+}
+.search{
+    margin-right : 0em;
+    margin-left : auto;
+    font-family: AppleSDGothicNeo;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #d5d5d5;
+}
+.searchIcon{
+    margin-right : 0em;
+    margin-left : 0em;
+    
+}
+.postBox{
+    margin-bottom : 12.5rem;
 }
