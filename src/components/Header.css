@@ -36,6 +36,13 @@
     flex :1;
     width :fit-content;
     height: fit-content; 
-    margin :0em 0em 0em 3em;
+    margin :auto 0em auto 3em;
     white-space: nowrap;  
+}
+
+.icon{
+    max-width: 3rem;
+    max-height: 3rem;
+    object-fit: contain;
+    margin-left : 0.25rem;
 }

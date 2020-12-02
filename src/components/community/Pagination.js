@@ -15,7 +15,7 @@ export const Pagination = ({postsPerPage, totalPosts, paginate}) => {
             {pageNumbers.map(number => (
                 <div key = {number} >
                     <a onClick = {() => setPageNow(paginate(number))} 
-                    className ={ number == pageNow ? styles.pageNow : styles.pageNumber}>
+                    className ={ number === pageNow ? styles.pageNow : styles.pageNumber}>
                         {number}
                     </a>
                 </div>

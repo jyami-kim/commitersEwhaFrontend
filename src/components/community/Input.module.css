@@ -1,0 +1,26 @@
+.container{
+    display : flex;
+    flex-direction : row;
+    margin: auto 0rem auto auto;
+    padding-bottom : 0.313rem;
+    width: 20.25rem;
+    border-bottom : 0.125rem solid #5f8276;
+
+    font-family: AppleSDGothicNeo;
+    font-size: 1rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #d5d5d5;
+}
+
+.input{
+    border: 0;
+    outline: none;
+}
+.icon{
+    margin: auto 0rem auto auto;
+}

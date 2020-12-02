@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import styles from './css/Community.module.css'
 import Posts from '../components/community/Posts' 
 import Pagination from '../components/community/Pagination' 
+import Inputs from '../components/community/Inputs.js'
 
 
 
@@ -43,8 +44,7 @@ const Community = () => {
                 <h2 className = {styles.subtitle}>Community</h2>
                 <div className = {styles.title}>
                     <div>커뮤니티</div>
-                    <div className = {styles.search}>검색어를 입력해주세요 {/* 컴포넌트 만들어서 넣을예정 */}</div>
-                    <div className = {styles.searchIcon}>아이콘</div>
+                    <Inputs/>
                 </div>
                 
                 <div className ={styles.nav}>

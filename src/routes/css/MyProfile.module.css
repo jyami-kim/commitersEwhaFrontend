@@ -1,0 +1,47 @@
+.container{
+    width : 80%;
+    height: 100%;
+    display : flex;
+    flex-direction: column;
+    margin: 0em auto;
+    align-items: left;
+}
+.rowBox{
+    display : flex;
+    flex-direction : row;
+}
+.rowBox2{
+    display : flex;
+    flex-direction : row;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+
+    font-family: AppleSDGothicNeo;
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+
+    padding-bottom : 4.5rem;
+   
+}
+.navNow{
+    color : #151515;
+    width :fit-content;
+    height: fit-content;  
+    margin :0em 3.75rem 0em 0em;
+    white-space: nowrap; 
+}
+
+.navDefault {
+    color: #e0e0e0;
+    width :fit-content;
+    height: fit-content;  
+    margin :0em 3.75rem 0em 0em;
+    white-space: nowrap; 
+}
