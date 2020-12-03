@@ -12,20 +12,20 @@
   .profile-button-container{
       flex : 1;
       text-align: center;
-      align-: center;
+      margin: 3.75rem auto 0rem auto;
   }
   .git-button{
-    width: 400px;
+    width: 25rem;
+    height : 3.75rem;
     outline:none;
-    padding: 22px 139px 17px 140px;
-    border-radius: 1em;
+    border-radius: 1rem;
     border : none;
     background-color: #00462a;
     
   }
   .button-text{
     font-family: AppleSDGothicNeo;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight : 700;
     font-stretch: normal;
     font-style: normal;
@@ -37,5 +37,5 @@
     font-family: AppleSDGothicNeo;
     text-align : center;
     font-weight: 500;
-    flex :1;
+    margin: 1.25rem auto 8.75rem auto;
   }

@@ -6,12 +6,17 @@
     width : 100%;
     border-color: #d5d5d5;
 }
+.containerRow{
+    display: flex;
+    flex-direction: row;
+
+}
 
 .titleText{
-    font-family: AcuminProWide;
+    font-family: acumin-pro-wide, sans-serif;
     height : 0.625em;
     margin-top: 3.75em;  
-    padding-bottom: 1.8em;
+    padding-bottom: 2.25em;
     font-size: 0.75em;
     font-weight: bold;
     line-height: 1.33;
@@ -32,6 +37,46 @@
 }
 .postBox{
     display: flex;
+    flex-direction: column;
+    margin-bottom : 8.5em;
+    width: 100%;
+}
+.postBox2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom : 8.5em;
+    width: 50%;
+}
+.cafeButton{
+    max-width: 27.5rem;
+    height: 3.625rem;
+    border-radius: 0.813rem;
+    border: solid 0.063rem #5f8276;
+    display: flex;
     flex-direction: row;
-    margin-bottom : 8.5em
+}
+
+.cafeText{
+  font-family: AppleSDGothicNeo;
+  font-size: 1rem;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5f8276;
+  margin : auto auto auto 1rem;
+}
+.goCafeText{
+  font-family: acumin-pro-wide, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5f8276;
+  margin : auto 1.313rem auto auto;
 }

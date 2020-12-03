@@ -15,8 +15,8 @@ const CommunitySpacePosts = ({posts, loading}) => {
             <div className ={styles.postsContainer}>
                 {posts_top.map(post => (
                     <div key = {post.id} className = {styles.post}>
-                        <text>날짜</text>
-                        <text>{post.title}</text>
+                        <div className = {styles.date}>2020.10.13</div>
+                        <div className ={styles.postText}>{post.title}</div>
                         <div className ={styles.tagContainer}>
                             <div className = {styles.tagGreen}>Spring</div>
                             <div className = {styles.tagYellow}>취준</div>
@@ -28,8 +28,8 @@ const CommunitySpacePosts = ({posts, loading}) => {
             <div className ={styles.postsContainer}>
                 {posts_bottom.map(post => (
                             <div key = {post.id} className = {styles.post}>
-                                <text>날짜</text>
-                                <text>{post.title}</text>
+                                <div className ={styles.date}>2020.10.19</div>
+                                <text className = {styles.postText}>{post.title}</text>
                                 <div className ={styles.tagContainer}>
                                 <div className = {styles.tagYellow}>취준</div>
                             </div>

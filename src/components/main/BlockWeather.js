@@ -21,10 +21,10 @@ const BlockWeather = ({blocks,loading}) => {
       <div className ={styles.scroll}>
       {blocks.map(block => (
         <div key = {block.id} className = {block.id < 4 ? styles.containerYellow : styles.containerGray}>
-          <div>{block.id}등</div>
-          <div className = {styles.profile} >프로필</div>
+          <div className = {styles.rank}>{block.id}등</div>
+          <div className = {styles.profile} ></div>
           <div className = {styles.usernameText}>{ block.title.length > 6 ? block.title.slice(0,5) : block.title }</div>
-          <div className = {styles.pointText}>{block.userID}점수</div>
+          <div className = {styles.pointText}>{block.userID}1000점</div>
         </div>
       ))}
       </div>

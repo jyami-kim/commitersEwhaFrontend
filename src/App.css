@@ -25,6 +25,8 @@
     url("./assets/fonts/AppleSDGothicNeoM.ttf") format("truetype");
 }
 
+@import url("https://use.typekit.net/dfo5kvn.css");
+
 .main-container{
   width: 80%;
   height: 100%;

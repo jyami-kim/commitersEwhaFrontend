@@ -15,28 +15,28 @@ const CommunitySideProjectPosts = ({posts, loading}) => {
             <div className={styles.postContainer}>
                 {posts_top.map(post => (
                     <div className = {styles.itemBox}>
-                        <text>홍보</text>
+                        <div className = {styles.subtitle}>홍보</div>
                         <div key = {post.id} className ={styles.post}>
                             <div className = {styles.preview}></div>
                             <div className = {styles.infoBox}>
-                                <text>{post.name}</text>
-                                <text>{post.email}</text>
-                                <div>comment like</div>
+                                <div className ={styles.postName}>{post.name}</div>
+                                <div className ={styles.postDetail}>{post.email} / 2020.10.11</div>
+                                <div className ={styles.rowBox}>comment like</div>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-            <div className={styles.postContainer}>
+            <div className={styles.postContainerBottom}>
                 {posts_bottom.map(post => (
                     <div className = {styles.itemBox}>
-                        <text>홍보</text>
+                        <div className = {styles.subtitle}>홍보</div>
                         <div key = {post.id} className ={styles.post}>
                             <div className = {styles.preview}></div>
                             <div className = {styles.infoBox}>
-                                <text>{post.name}</text>
-                                <text>{post.email}</text>
-                                <div>comment like</div>
+                                <div className ={styles.postName}>{post.name}</div>
+                                <div className ={styles.postDetail}>{post.email} / 2020.10.11</div>
+                                <div className ={styles.rowBox}>comment like</div>
                             </div>
                         </div>
                     </div>

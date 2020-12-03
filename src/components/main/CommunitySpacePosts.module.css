@@ -26,29 +26,52 @@
 .tagYellow{
     width: auto;
     height: auto;
-    padding: 0.25px 0.5em;
-    margin-right :0.25em;
-    border-radius:0.3125em;
-    border: solid 0.0625em#fbb109;
+    padding: 0.016rem 0.5rem;
+    margin-right :0.25rem;
+    border-radius:0.3125rem;
+    border: solid 0.0625rem#fbb109;
     background-color: #fcd274;
     text-align : center;
     color: #ffffff;
     font-family: AppleSDGothicNeo;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
 .tagGreen{
     width: auto;
     height: auto;
-    padding: 0.25px 0.5em; 
-    margin-right :0.25em;
-    border-radius:0.3125em;
-    border: solid 0.0625em #00462a;
+    padding: 0.016rem 0.5rem; 
+    margin-right :0.25rem;
+    border-radius:0.3125rem;
+    border: solid 0.0625rem #00462a;
     background-color: #5f8276;
     text-align : center;
     color: #ffffff;
     font-family: AppleSDGothicNeo;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
+}
+.date{
+    font-family: AppleSDGothicNeo;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #888888;}
+
+.postText{
+    font-family: AppleSDGothicNeo;
+    font-size: 1rem;
+    margin : 0.5rem auto 0.875rem 0rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
 }

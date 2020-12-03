@@ -1,3 +1,4 @@
+
 img{
     height: auto;
     object-fit: contain;
@@ -35,10 +36,10 @@ img{
     margin-top :  6.6875em;
 }
 .mainSubtitleText {
-    margin-top : 4em;
+    margin-top : 3.75rem;
     margin-bottom : auto;
     flex : 1;
-    /*font-family: AcuminProWide;*/
+    font-family: acumin-pro-wide, sans-serif;
     font-size: 12px;
     font-weight: 700;
     font-stretch: normal;

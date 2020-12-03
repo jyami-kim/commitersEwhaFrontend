@@ -1,9 +1,11 @@
 .containerNotice{
     display : flex;
     flex-direction : row;
-    width : 100%;
 }
-
+.continaerJob{
+    display: flex;
+    flex-direction: column; 
+}
 .itemContainer{
     width : 100%;
     display: flex;
@@ -14,8 +16,18 @@
 
 .postbox{
     min-height:6.375em; 
-    width : 27.5em;
-    margin: auto auto auto 0em;
+    max-width : 27.5em;
+    padding-top: 1rem;
+    margin: auto 1.5rem auto 0em;
+    border-bottom: 0.1em solid #ededed;
+    overflow-wrap: break-word;
+    text-align : left;
+}
+.postboxJob{
+    min-height:6.375em; 
+    max-width : 27.5em;
+    padding-top: 1rem;
+    margin: auto 0 auto 0em;
     border-bottom: 0.1em solid #ededed;
     overflow-wrap: break-word;
     text-align : left;

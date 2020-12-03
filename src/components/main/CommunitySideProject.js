@@ -23,7 +23,7 @@ const CommunitySideProject = () => {
        <div className = {styles.container}>
             <div className = {styles.titleText}>EWHA COMMUNITY | Side Project</div>
             <CommunitySideProjectPosts posts = {posts} loading ={loading} />
-        </div   >
+        </div>
     )
 }
 

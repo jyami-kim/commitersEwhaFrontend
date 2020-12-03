@@ -11,6 +11,7 @@ import InfoTechRss from '../components/main/InfoTechRss'
 import InfoNotice from '../components/main/InfoNotice'
 import styles from './css/Main.module.css'
 import mainText from '.././assets/images/main_text_winter@3x.png'
+ 
 
 const Main = () => {
     

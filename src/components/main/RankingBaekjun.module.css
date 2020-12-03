@@ -1,15 +1,21 @@
 text {
-    flex : 1;
     font-family: AppleSDGothicNeo;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 800;
     text-align: left;
     color: #151515;
+    
+}
+.container{
+    border-top : 0.063rem solid #ededed;
+    padding-top : 4.063rem;
 }
 
-.container{
+.itemBox{
     display : flex;
     flex-direction: row;
+    margin-bottom : 3.75rem;
+ 
 }
 
 .insideContainer{
@@ -36,7 +42,7 @@ text {
 
 
 .infoBox{
-    flex :1;
+    height : 3.75rem;
     border-bottom: 0.1em solid;
     border-color: #d5d5d5;
     display : flex;
@@ -44,19 +50,23 @@ text {
 }
 
 .infoBoxNoBorder{
-    flex :1;
+    height : 3.75rem;
+    margin : auto 0rem aut0 aut0;
+    justify-content: right;
     display : flex;
     flex-direction: row;
    
 }
 
 .titleText{
-    font-family: AppleSDGothicNeo;
-    margin-bottom : 0em;
-    margin-top : 0.5em;
-    font-size: 16px;
-    font-weight: 800;
-    color: #888888;
+    font-family: acumin-pro-wide, sans-serif;
+    font-weight: 700;
+    font-size : 0.75rem;
+    font-style: normal;
+    text-align: left;
+    color: #2b2b2b;
+    margin-bottom: 2.25rem;
+
 }
 
 .textRank {
@@ -65,11 +75,26 @@ text {
     font-size: 5em;
     font-weight: bold;
     color: #00462a;
+    text-align: right;
+    margin : auto 1rem auto auto;
 }
-
+.subText{
+   
+  font-family: AppleSDGothicNeo;
+  font-size: 1rem;
+  margin : auto auto auto 1rem;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #151515;
+}
 .textNumber{
-   font-family: AppleSDGothicNeo;
-  font-size: 20px;
+  font-family: AppleSDGothicNeo;
+  font-size: 1.25rem;
+  margin : auto 1rem auto auto;
   font-weight: bold;
   text-align: right;
   color: #00462a;

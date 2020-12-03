@@ -2,9 +2,8 @@
 .container{
     background-color : #00462a;
     height : 20.8125em;
-    margin-right : -12.5%;
+    margin : auto -12.5% auto -12.5%;
     padding-right : 12.5%;
-    margin-left : -12.5%;
     padding-left : 12.5%;
 
     display: flex;
@@ -37,10 +36,34 @@
 
 .title{
     margin: 0em auto 3.3125em 0em;
-    font-family: AcuminProWide;
+    font-family: acumin-pro-wide, sans-serif;
     font-size: 0.75em;
 }
 .copyright{
     margin: 7em auto auto 0em;
     color: #b3c3be;
+}
+.text{
+    font-family: AppleSDGothicNeo;
+    font-size: 1rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f7f7f7;
+    margin-bottom : 1rem;
+}
+.textSmall{
+   font-family: AppleSDGothicNeo;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #b3c3be;
+  margin-bottom: 1rem;
 }

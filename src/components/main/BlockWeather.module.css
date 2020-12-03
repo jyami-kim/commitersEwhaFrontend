@@ -11,20 +11,22 @@
   /* width :0;*/
 }
 .containerGray{
-    min-width: 138px;
-    height: 179px;
-    margin-right : 0.25em;
+    min-width: 8.625rem;
+    max-height: 11.188rem;
+    margin : 0rem 0.25rem 0rem 0rem;
     border-width : 1px;
     background-color: #f7f7f7;
     text-align: center;
     font-family: AppleSDGothicNeo;
     font-weight: 800;
+    align-items: center;
+    justify-content: center;
     
 }
 .containerYellow{
-    min-width : 8.625em;
-    height : 11.1875em;
-    margin-right : 0.25em;
+    min-width : 8.625rem;
+    max-height : 11.188rem;
+    margin : 0rem 0.25rem 0rem 0rem;
     border-width : 1px;
     background-color: rgba(251, 177, 9, 0.08);
     text-align: center;
@@ -32,16 +34,23 @@
     font-family: AppleSDGothicNeo;
     font-weight: 800;
 }
-
+.rank{
+    margin : 1.25rem auto 0rem auto;
+}
 .profile{
-    height : 3em;
+    height : 3rem;
+    width: 3rem;
+    margin: 0.75rem auto 0.75rem auto;
+    border: solid 0.063rem #fbb109;
+    border-radius: 1.5rem;
 }
 
 .usernameText{
-    font-size: 16px;
+    font-size: 1rem;
     color: #2b2b2b;
 }
 .pointText{
-    font-size: 12px;
+    font-size: 0.75rem;
      color: #fbb109;
+     margin-bottom : 1.5rem;
 }

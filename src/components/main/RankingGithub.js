@@ -47,7 +47,7 @@ const RankingGithub = () => {
             </div>
              <div>{/* 여기서부터 week*/}</div>
 
-            <div className = {styles.rankingGithubText}>{WEEK_TITLE}</div>
+            <div className = {styles.weekText}>{WEEK_TITLE}</div>
               <div className = {styles.blocksContainer}>
                 <BlockWeek blocks = {currentBlocks} loading = {loading}/>
             </div>
