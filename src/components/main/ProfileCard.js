@@ -2,7 +2,13 @@ import React from 'react'
 import './ProfileCard.css'
 import styles from '../../routes/css/Main.module.css'
 
-const ProfileCard =() => {
+const ProfileCard =({getLogState}) => {
+    const getGithub = () => {
+        console.log("깃허브 연동");
+        alert("깃허브연동");
+        getLogState(true);
+    }    
+
     return(
         <div className = "profileCard-container">
             <div className = {styles.mainSubtitleText}>MY PROFILE</div>
@@ -16,9 +22,6 @@ const ProfileCard =() => {
     )
 }
 
-const getGithub = () => {
-    console.log("깃허브 연동");
-}
 
 
 export default ProfileCard

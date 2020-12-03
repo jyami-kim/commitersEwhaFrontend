@@ -47,16 +47,20 @@ const InfoNotice = () => {
             
             <div className ={styles.containerRow}>
                 <div className = {styles.postBox}>
-                    <div className = {styles.subtitle}>컴퓨터공학과 공지사항</div>
+                    <div className = {styles.subtitle}>컴퓨터공학과 공지사항
+                        <div className = {styles.goText}>WEBSITE로 바로가기</div>
+                    </div>
                     <InfoNoticePosts posts = {currentPosts} loading = {loading}/>
                 </div>
                
                 <div className = {styles.postBox2}>
-                    <div className = {styles.subtitle}>인턴&취업</div>
+                    <div className = {styles.subtitle}>인턴&취업
+                        <div className = {styles.goText}>WEBSITE로 바로가기</div>
+                    </div>
                     <InfoJobPosts posts = {currentPostsJob} loading = {loading_job}/>
                     <div className = {styles.cafeButton}>
                         <div className ={styles.cafeText}>이화 퀸프 카페</div>
-                        <div className = {styles.goCafeText}>WEBSITE로 바로가기</div>
+                        <div className = {styles.goText}>WEBSITE로 바로가기</div>
                     </div>
                 </div>
             </div>

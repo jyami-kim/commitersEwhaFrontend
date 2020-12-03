@@ -21,7 +21,9 @@ const CommunitySideProject = () => {
     },[]);
     return (
        <div className = {styles.container}>
-            <div className = {styles.titleText}>EWHA COMMUNITY | Side Project</div>
+            <div className = {styles.titleText}>EWHA COMMUNITY | Side Project
+                <div className = {styles.goText}>MORE</div>
+            </div>
             <CommunitySideProjectPosts posts = {posts} loading ={loading} />
         </div>
     )

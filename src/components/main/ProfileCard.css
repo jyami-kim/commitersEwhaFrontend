@@ -1,6 +1,6 @@
 .profileCard-container{
     background-color : #f7f7f7;
-    height: 20em;
+    min-height: 20em;
     align-content: center;
     display: flex;
     flex-direction: column;
@@ -39,3 +39,62 @@
     font-weight: 500;
     margin: 1.25rem auto 8.75rem auto;
   }
+
+  /* AFTER LOGGGED IN*/
+  .username-profile{
+    font-family: AppleSDGothicNeo;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+}
+
+.info-detail-profile{
+  font-family: AppleSDGothicNeo;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5f8276;
+}
+.profile-rowContainer{
+  display: flex;
+  flex-direction: row;
+  margin: 3.063rem 0rem 3.75rem 0rem;
+}
+.profile-rowContainer-with-border{
+  display : flex;
+  flex-direction: row;
+  border: 0.063rem solid #d5d5d5;
+  width : 100%;
+}
+.profile-box-with-border{
+  width : 20.938rem;
+  border-right : 0.063rem solid #d5d5d5;
+}
+.profile-box-no-border{
+  width : 20.938rem;
+}
+.profile-title-logged {
+  margin-top : 3.75rem;
+  margin-bottom : 1.875rem;
+  font-family: acumin-pro-wide, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2b2b2b;
+}
+.profile-graybox{
+  max-width: 42rem;
+  height: 6.813rem;
+  background-color: #ededed;
+}

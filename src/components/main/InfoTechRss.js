@@ -21,7 +21,9 @@ const InfoTechRss = () => {
     },[]);
     return (
        <div className = {styles.container}>
-            <div className = {styles.titleText}>EWHA INFO | Tech Rss</div>
+            <div className = {styles.titleText}>EWHA INFO | Tech Rss
+                <div className = {styles.goText}>MORE</div>
+            </div>
             <InfoTechRssPosts posts = {posts} loading ={loading} />
         </div>
     )

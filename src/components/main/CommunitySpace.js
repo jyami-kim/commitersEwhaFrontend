@@ -26,7 +26,9 @@ const CommunitySpace = () => {
    
     return (
         <div className = {styles.container}>
-            <div className = {styles.titleText}>EWHA COMMUNITY | Community Space</div>
+            <div className = {styles.titleText}>EWHA COMMUNITY | Community Space
+                <div className = {styles.goText}>MORE</div>
+            </div>
             <CommunitySpacePosts posts = {currentPost} loading ={loading} />
         </div>
     )
