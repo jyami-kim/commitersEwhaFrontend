@@ -26,23 +26,29 @@ const MyProfile = () => {
             <Header/>
             <div className = {styles.rowBox /*Body*/}>
                 <div className = {styles.title}>MY PROFILE</div>
-                <div>프로필 수정하기</div>
+                <div className = {styles.editProfile}>프로필 수정하기</div>
             </div>
             <div className = {styles.rowBox2}>
                 <div className = {styles.nameBox}>
-                    <div>Jyami</div>
-                    <div>Backend Developer</div>
+                    <div className = {styles.name}>Jyami</div>
+                    <div className = {styles.jobname}>Backend Developer</div>
                 </div>
-                <div>프로필 동그라미</div>
-                <div className ={styles.pageBox}>웹사이트</div>
-                <div className ={styles.pageBox}>Github</div>
+                <div className = {styles.profileCircle}></div>
+                <div className ={styles.pageBox}>
+                    <div>이미지</div>
+                    <div>웹사이트</div> 
+                </div>
+                <div className ={styles.pageBox2}>
+                    <div>이미지</div>
+                    <div>Github</div> 
+                </div>
             </div>
             <div className = {styles.nav}>
                     <div className = {sectionName === "기본정보" ? styles.navNow : styles.navDefault}>기본 정보</div>
                     <div className = {sectionName === "나의커밋정보" ? styles.navNow : styles.navDefault}>나의 커밋 정보</div>
                     <div className = {sectionName === "통계" ? styles.navNow : styles.navDefault}>통계</div>
             </div>
-        
+            <div>line</div>
             <UserInfo loading = {loading} user = {user} />
             {/*<UserInfo /> userInfo 불러와서 뿌려야야/ */}
 

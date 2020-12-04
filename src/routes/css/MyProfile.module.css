@@ -9,10 +9,12 @@
 .rowBox{
     display : flex;
     flex-direction : row;
+    align-items: center;
 }
 .rowBox2{
     display : flex;
     flex-direction : row;
+    margin-bottom: 4.5rem;
 }
 .nav{
     display: flex;
@@ -44,4 +46,68 @@
     height: fit-content;  
     margin :0em 3.75rem 0em 0em;
     white-space: nowrap; 
+}
+.title{
+    font-family: AcuminProWide;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00462a;
+}
+.editProfile{
+    padding: 0.688rem;
+    border-radius: 1rem;
+    border: solid 0.063rem #5f8276;
+    font-family: AppleSDGothicNeo;
+    font-size: 1rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5f8276;
+    margin : 3rem 0rem 0rem auto;
+}
+.name{
+    font-family: AppleSDGothicNeo;
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+}
+.profileCircle{
+    width: 4.375rem;
+    height: 4.375rem;
+    border: solid 0.3rem #fff;
+    box-shadow: 0 0 0 1px #5f8276;
+    border-radius: 50%;
+    background-color: #ededed;
+    margin : auto 0rem auto 26.25rem;
+}
+.jobname{
+    font-family: AppleSDGothicNeo;
+    font-size: 1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5f8276;
+    margin : 0.313rem auto auto 0rem;
+}
+.pageBox{
+    margin : auto 0rem auto auto;
+}
+.pageBox2{
+    margin : auto 0rem auto 0rem;
 }

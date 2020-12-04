@@ -11,18 +11,28 @@ const UserInfo = ({loading, user}) => {
     return (
         <div className = {styles.container}>
             <div className = {styles.rowBox}>
-                <div>
-                    <text>자기소개</text>
-                    <text className = {styles.text}>{intro}</text>
+                <div className = {styles.item}>
+                    <div>자기소개</div>
+                    <div className = {styles.text}>{intro}</div>
+                </div>
+                <div className = {styles.item}>
+                    <div>Profile</div>
+                    <div className = {styles.text}>{intro}</div>
                 </div>
             </div>
+            <div>line</div>
             <div className = {styles.rowBox}>
                 <div>
-                    {console.log(user)}
-                    <div>이름</div>
-                    <div>이메일</div>
+                    <div>직업/직군</div>
+                    <div>{intro}</div>
+                </div>
+                <div className = {styles.item}>
+                    <div>스택</div>
+                    <div className = {styles.text}>{intro}</div>
                 </div>
             </div>
+            
+            
             
         </div>
     )
