@@ -3,6 +3,8 @@ import Header from '../components/Header'
 import styles from './css/MyProfile.module.css'
 import UserInfo from '../components/myProfile/UserInfo'
 import Axios from 'axios'
+import github_logo from '../assets/icon/myProfile/icon_github@3x.png'
+import page_website from '../assets/icon/myProfile/icon_website@3x.png'
 
 const MyProfile = () => {
     const sectionName = "기본정보"
@@ -35,12 +37,18 @@ const MyProfile = () => {
                 </div>
                 <div className = {styles.profileCircle}></div>
                 <div className ={styles.pageBox}>
-                    <div>이미지</div>
-                    <div>웹사이트</div> 
+                    <a target="_blank" rel="noreferrer" href= "https://github.com/">
+                        <img src={page_website} alt="page logo"/>
+                    </a>
+                        <div className = {styles.logoname}>웹사이트</div> 
+                    
                 </div>
                 <div className ={styles.pageBox2}>
-                    <div>이미지</div>
-                    <div>Github</div> 
+                    <a target="_blank" rel="noreferrer" href= "https://github.com/">
+                        <img src={github_logo} alt="github logo"/>
+                    </a>
+                        <div className = {styles.logoname}>Github</div> 
+                    
                 </div>
             </div>
             <div className = {styles.nav}>
@@ -48,7 +56,7 @@ const MyProfile = () => {
                     <div className = {sectionName === "나의커밋정보" ? styles.navNow : styles.navDefault}>나의 커밋 정보</div>
                     <div className = {sectionName === "통계" ? styles.navNow : styles.navDefault}>통계</div>
             </div>
-            <div>line</div>
+            <div className = {styles.line}></div>
             <UserInfo loading = {loading} user = {user} />
             {/*<UserInfo /> userInfo 불러와서 뿌려야야/ */}
 

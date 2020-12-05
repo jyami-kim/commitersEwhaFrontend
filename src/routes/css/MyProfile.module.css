@@ -1,3 +1,6 @@
+img{
+    margin : 0;
+}
 .container{
     width : 80%;
     height: 100%;
@@ -60,6 +63,7 @@
 }
 .editProfile{
     padding: 0.688rem;
+    width : 8rem;
     border-radius: 1rem;
     border: solid 0.063rem #5f8276;
     font-family: AppleSDGothicNeo;
@@ -107,7 +111,25 @@
 }
 .pageBox{
     margin : auto 0rem auto auto;
+    align-items: center;
 }
 .pageBox2{
-    margin : auto 0rem auto 0rem;
+    margin : auto 0rem auto 1.5rem;
+    align-items: center;
 }
+.logoname{
+    font-family: AppleSDGothicNeo;
+    font-size: 0.875rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5f8276;
+    text-decoration: none;
+}
+.line{
+    border-top : 0.063rem solid #ededed;
+    width : 100%;
+  }

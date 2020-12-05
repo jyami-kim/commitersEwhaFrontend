@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import './Header.css'
 import logo from '../assets/logo/logo_winter@3x.png'
 import profileIcon from '../assets/icon/header/icon_myprofile@3x.png'
-import noticeIcon from '../assets/icon/icon_notice@3x.png'
+import noticeIcon from '../assets/icon/header/icon_notice@3x.png'
 
 
 const Header = ({sectionName}) => {

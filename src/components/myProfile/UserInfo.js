@@ -11,28 +11,76 @@ const UserInfo = ({loading, user}) => {
     return (
         <div className = {styles.container}>
             <div className = {styles.rowBox}>
-                <div className = {styles.item}>
-                    <div>자기소개</div>
+                <div className = {styles.item1}>
+                    <div className = {styles.subtitle}>자기소개</div>
                     <div className = {styles.text}>{intro}</div>
                 </div>
-                <div className = {styles.item}>
-                    <div>Profile</div>
-                    <div className = {styles.text}>{intro}</div>
+                <div className = {styles.item2}>
+                    <div className = {styles.subtitle}>Profile</div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>이름</div>
+                        <div className= {styles.info}>김민정</div>
+                    </div>
+                    <div className = {styles.line}></div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>이메일</div>
+                        <div className= {styles.info}>kminjung@ewhain.net</div>
+                    </div>
+                    <div className = {styles.line}></div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>전공</div>
+                        <div className= {styles.info}>컴퓨터공학과</div>
+                    </div>
+                    <div className = {styles.line}></div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>입학년도</div>
+                        <div className= {styles.info}>2017(재학)</div>
+                    </div>
                 </div>
             </div>
-            <div>line</div>
+            <div className = {styles.line}></div>
+            <div className = {styles.rowBox2}>
+                <div className = {styles.item1}>
+                    <div className = {styles.subtitle}>직업/직군</div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>직장명</div>
+                        <div className= {styles.info}>Kakao</div>
+                    </div>
+                    <div className = {styles.line}></div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>직군</div>
+                        <div className= {styles.info}>Backend Developer</div>
+                    </div>
+                </div>
+                <div className = {styles.item2}>
+                    <div className = {styles.subtitle}>스택</div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.tag}>HTML</div>
+                        <div className = {styles.tag}>CSS</div>
+                        <div className = {styles.tag}>Javascript</div>
+                        <div className = {styles.tag}>Ruby</div>
+                    </div>
+                </div>
+            </div>
             <div className = {styles.rowBox}>
-                <div>
-                    <div>직업/직군</div>
-                    <div>{intro}</div>
-                </div>
-                <div className = {styles.item}>
-                    <div>스택</div>
-                    <div className = {styles.text}>{intro}</div>
+                <div className = {styles.item1}>
+                    <div className = {styles.subtitle}>관심 직군</div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>직군1</div>
+                        <div className= {styles.info}>Kakao</div>
+                    </div>
+                    <div className = {styles.line}></div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>직군2</div>
+                        <div className= {styles.info}>Backend Developer</div>
+                    </div>
+                    <div className = {styles.line}></div>
+                    <div className = {styles.infoBox}>
+                        <div className = {styles.infoTitle}>직군2</div>
+                        <div className= {styles.info}>Backend Developer</div>
+                    </div>
                 </div>
             </div>
-            
-            
             
         </div>
     )
