@@ -23,15 +23,15 @@ const InfoNotice = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
-            const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            setPosts(res.data);
+            const res = await axios.get('http://49.50.162.81:8080/api/scrap/ewha/notification');
+            setPosts(res.data.response.jobList);
             setLoading(false);
         }
 
         const fetchPostsJob = async () => {
             setLoadingJob(true);
-            const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            setPostsJob(res.data);
+            const res = await axios.get('http://49.50.162.81:8080/api/scrap/ewha/job');
+            setPostsJob(res.data.response.jobList);
             setLoadingJob(false);
         }
         fetchPosts();
@@ -60,7 +60,7 @@ const InfoNotice = () => {
                     <InfoJobPosts posts = {currentPostsJob} loading = {loading_job}/>
                     <div className = {styles.cafeButton}>
                         <div className ={styles.cafeText}>이화 퀸프 카페</div>
-                        <div className = {styles.goText}>WEBSITE로 바로가기</div>
+                        <a href= "https://cafe.naver.com/ewhaqueenp/" target="_blank" rel="noreferrer" className = {styles.goText} >WEBSITE로 바로가기</a>
                     </div>
                 </div>
             </div>

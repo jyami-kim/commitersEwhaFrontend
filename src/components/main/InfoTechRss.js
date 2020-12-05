@@ -6,14 +6,14 @@ import styles from './MainComponents.module.css'
 const InfoTechRss = () => {
     const [posts , setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage] = useState(4);
+    //const [currentPage, setCurrentPage] = useState(1);
+    //const [postPerPage] = useState(4);
 
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
-            const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-            setPosts(res.data);
+            const res = await axios.get('http://49.50.162.81:8080/api/rss');
+            setPosts(res.data.response.rssFeedContents);
             setLoading(false);
 
         }

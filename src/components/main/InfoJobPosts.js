@@ -11,8 +11,10 @@ const InfoJobPosts = ({posts, loading}) => {
                 {posts.slice(0,3)
                 .map(post =>(
                     <div key = {post.id} className = {styles.postboxJob}>
+                        <a href={post.link} target="_blank" rel="noreferrer" >
                         <div className = {styles.date}>2020.10.01</div>
                         <div className ={styles.postTitle}>{post.title}</div>
+                        </a>
                     </div>
                 ))}
             </div>

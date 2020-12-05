@@ -80,6 +80,7 @@ const UserInfo = ({loading, user}) => {
                         <div className= {styles.info}>Backend Developer</div>
                     </div>
                 </div>
+                <div className = {styles.item2}></div>
             </div>
             
         </div>

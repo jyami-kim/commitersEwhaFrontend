@@ -12,8 +12,10 @@ const InfoNoticePosts = ({posts, loading}) => {
                 {posts.slice(0,4)
                 .map(post =>(
                     <div key = {post.id} className = {styles.postbox}>
+                        <a href={post.link} target="_blank" rel="noreferrer" >
                         <div className = {styles.date}>2020.10.01</div>
                         <div className ={styles.postTitle}>{post.title}</div>
+                        </a>
                     </div>
                 ))}
             </div>
@@ -21,8 +23,10 @@ const InfoNoticePosts = ({posts, loading}) => {
                 {posts.slice(4,8)
                 .map(post =>(
                     <div key = {post.id} className = {styles.postbox}>
+                        <a href={post.link} target="_blank" rel="noreferrer" >
                         <div className = {styles.date}>2020.10.01</div>
                         <div className ={styles.postTitle}>{post.title}</div>
+                        </a>
                     </div>
                 ))}
             </div>

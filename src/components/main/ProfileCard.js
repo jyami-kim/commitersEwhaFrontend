@@ -1,13 +1,30 @@
 import React from 'react'
 import './ProfileCard.css'
 import styles from '../../routes/css/Main.module.css'
+import LoginGithub from 'react-login-github'
 
 const ProfileCard =({getLogState}) => {
-    const getGithub = () => {
-        console.log("깃허브 연동");
-        alert("깃허브연동");
+    const CLIENT_ID = "de41637d8bc3a1cdd9bd";
+
+    const onSuccess = (response) => {
+        console.log(response);
         getLogState(true);
+        
+    } 
+    const onFailure = (response) =>{
+        console.log(response);
+        alert("fail!");
+        getLogState(false);
+    }
+    const getGithub = () => {
+        console.log("was clicked");
+        getLogState(true);
+        return(
+            <LoginGithub clientId= {CLIENT_ID} onSuccess={onSuccess}
+            onFailure={onFailure}/>
+        )
     }    
+    
 
     return(
         <div className = "profileCard-container">

@@ -1,3 +1,6 @@
+a{
+  text-decoration: none;
+}
 .container{
     display :flex;
     flex-direction :row;
@@ -28,6 +31,7 @@
     min-width: 18.9em;
     height: 10em;
     margin: 0 1.5em 0 0;
+    padding-right : 1em;
     border-radius:  0.5em;
     background-color: #f7f7f7;
     overflow-wrap: break-word;
@@ -44,7 +48,7 @@
   font-weight: normal;
   line-height: 1.25;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 }
 
 .date{

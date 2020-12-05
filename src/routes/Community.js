@@ -28,11 +28,11 @@ const Community = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
-            const res =await axios.get('https://jsonplaceholder.typicode.com/posts');
+            const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
             setPosts(res.data);
             setLoading(false);
         }
-        fetchPosts();
+        fetchPosts().catch(err => console.error(err));
     }, []);
     
     const sectionName = "전체";

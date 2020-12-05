@@ -42,6 +42,7 @@ const Main = () => {
                     <div className = {styles.introMessage}>
                             <NewlineText text = {INTRO_MESSAGE}/>
                     </div>
+                        
                         {setProfileCard(isLogin)}
                         <RankingGithub />
                         <RankingBaekjun />
