@@ -2,7 +2,57 @@ import React, {useState,useEffect} from 'react'
 import './ProfileCard.css'
 import axios from 'axios'
 
-const ProfileCardLogged = ({CLIENT_ID}) => {
+const ProfileCardLogged = () => {
+
+    const [code, setCode] = useState([]);
+    const [tokendata, setData] =useState([]);
+ 
+    const CLIENT_SECRET = "6168825ba305ffaba05903c1ad9ad9f3d1e4229a";
+    const CLIENT_ID = "de41637d8bc3a1cdd9bd";
+
+    useEffect(() =>{
+        /*
+        const fetchData = async () =>{
+            //setLoading(true);
+
+            const res = await axios.get('https://github.com/login/oauth/authorize',{
+                CLIENT_ID
+            });
+            
+        }*/
+        const url = window.location.href;
+            const hasCode = url.includes("?code=")
+
+            if(hasCode){
+                const newUrl = url.split("?code=");
+                setCode(newUrl[1]);
+                console.log(newUrl[1]);
+                console.log("code is :" + code);
+            }
+
+        const fetchToken = async () => {
+            const res = await axios.post('https://github.com/login/oauth/access_token',
+                {
+                    code,
+                    CLIENT_ID, // application의 정보
+                    CLIENT_SECRET, // application의 정보
+                },
+                {
+                    headers: {
+                        accept: 'application/json',
+                        "Access-Control-Allow-Origin" : "*"
+                      },
+                }
+            )
+            const tokendata = res.data.access_token;
+            setData(tokendata);
+            console.log("inside fetchdata");
+        }
+        //fetchData();
+        fetchToken();
+        console.log(tokendata);
+        console.log(code);
+    },[])
     
     return (
         <div className = "profileCard-container">
