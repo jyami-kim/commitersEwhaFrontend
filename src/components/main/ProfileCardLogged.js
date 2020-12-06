@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import './ProfileCard.css'
+import axios from 'axios'
 
-const ProfileCardLogged = () => {
+const ProfileCardLogged = ({CLIENT_ID}) => {
+    
     return (
         <div className = "profileCard-container">
             <div className = "profile-title-logged">MY PROFILE</div>
