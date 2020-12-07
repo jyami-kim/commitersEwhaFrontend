@@ -85,3 +85,16 @@
   color: #5f8276;
   margin : auto 1.313rem auto auto;
 }
+.arrow{
+    margin : auto 0rem auto 0rem;
+}
+.link{
+    margin : auto 0rem auto auto;
+    display:flex;
+    flex-direction: row;
+}
+.link2{
+    margin : auto 2.813rem auto auto;
+    display:flex;
+    flex-direction: row;
+}

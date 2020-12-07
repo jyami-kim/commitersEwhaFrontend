@@ -1,18 +1,18 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ProfileCard from '../components/main/ProfileCard'
 import ProfileCardLogged from '../components/main/ProfileCardLogged'
-import RankingGithub from '../components/main/RankingGithub'
+import RankingGithub from '../components/main/RankingGithub/RankingGithub'
 import RankingBaekjun from '../components/main/RankingBaekjun.js'
-import CommunitySpace from '../components/main/CommunitySpace.js'
-import CommunitySideProject from '../components/main/CommunitySideProject.js'
-import InfoTechRss from '../components/main/InfoTechRss'
-import InfoNotice from '../components/main/InfoNotice'
+import CommunitySpace from '../components/main/community/CommunitySpace.js'
+import CommunitySideProject from '../components/main/community/CommunitySideProject.js'
+import InfoTechRss from '../components/main/info/InfoTechRss'
+import InfoNotice from '../components/main/info/InfoNotice'
 import styles from './css/Main.module.css'
 import mainText from '.././assets/images/main_text_winter@3x.png'
-import axios from 'axios'
+import {GOOGLE_AUTH_URL } from '../constants'
  
 
 
@@ -20,7 +20,7 @@ const Main = () => {
     const CLIENT_ID = "de41637d8bc3a1cdd9bd";
 
     const setProfileCard = () => {
-        if(window.location.pathname == "/callback"){
+        if(window.location.pathname == {GOOGLE_AUTH_URL}){
             return <ProfileCardLogged/>
         }
         return <ProfileCard />

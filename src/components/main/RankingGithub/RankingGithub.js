@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import styles from './RankingGithub.module.css'
 import BlockWeather from './BlockWeather'
 import BlockWeek from './BlockWeek'
 import axios from 'axios';
-
+import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 
 
 //나중에 계절 파라미터로 받을 것
@@ -39,15 +40,26 @@ const RankingGithub = () => {
 
     return (
         <div className = {styles.rankingGithubContainer}>
-            <div className = {styles.subtitleText}>EWHA RANKING | Github
+           
+            <div className = {styles.subtitleText}>EWHA RANKING | Github</div>
+            <div className = {styles.rowBox}>
                 <div className = {styles.rankingGithubText}>{SEASON_TITLE}</div>
+                <Link to = "/Ranking" className = {styles.link}>
+                    <div className = {styles.more}>MORE</div>
+                    <img src={arrow} alt="arrow" className = {styles.arrow}/>
+                </Link>
             </div>
+           
             <div className = {styles.blocksContainer}>
                 <BlockWeather blocks = {currentBlocks} loading = {loading}/>
             </div>
-             <div>{/* 여기서부터 week*/}</div>
-
-            <div className = {styles.weekText}>{WEEK_TITLE}</div>
+            <div className = {styles.rowBox2}>
+                <div className = {styles.weekText}>{WEEK_TITLE}</div>
+                <Link to = "/Ranking" className = {styles.link}>
+                        <div className = {styles.more}>MORE</div>
+                        <img src={arrow} alt="arrow" className = {styles.arrow}/>
+                </Link>
+            </div>
               <div className = {styles.blocksContainer}>
                 <BlockWeek blocks = {currentBlocks} loading = {loading}/>
             </div>

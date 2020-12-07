@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Posts.module.css'
+import iconHeart from '../../assets/icon/heartcomment/icon_heart_outline_green@3x.png'
+import iconComment from '../../assets/icon/heartcomment/icon_comment_outline_green@3x.png'
 
 const Posts = ({loading, posts}) => {
     
@@ -22,7 +24,12 @@ const Posts = ({loading, posts}) => {
                     <div className = {styles.bodyText}>{ post.body.length > 200 ? 
                         getSliced(post.body): post.body }
                     </div>
-                    <div className ={styles.itemBox}>comment like</div>
+                    <div className ={styles.itemBox}>
+                        <img src={iconComment} alt="comment" className ={styles.comment}/>
+                        <div>12</div>
+                        <img src={iconHeart} alt="heart" className = {styles.heart}/>
+                        <div>13</div>
+                    </div>
                 </div>
             ))}
         </div>

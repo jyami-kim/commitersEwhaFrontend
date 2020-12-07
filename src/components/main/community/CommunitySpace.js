@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import styles from './MainComponents.module.css'
+import {Link} from 'react-router-dom'
+import styles from '../MainComponents.module.css'
 import CommunitySpacePosts from './CommunitySpacePosts'
+import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 
 const CommunitySpace = () => {
     const [posts, setPosts] = useState([]);
@@ -27,7 +29,10 @@ const CommunitySpace = () => {
     return (
         <div className = {styles.container}>
             <div className = {styles.titleText}>EWHA COMMUNITY | Community Space
-                <div className = {styles.goText}>MORE</div>
+                <Link to = "/Community" className={styles.link}>
+                    <div className = {styles.goText}>MORE</div>
+                    <img src={arrow} alt="arrow" className ={styles.arrow}/>
+                </Link>
             </div>
             <CommunitySpacePosts posts = {currentPost} loading ={loading} />
         </div>

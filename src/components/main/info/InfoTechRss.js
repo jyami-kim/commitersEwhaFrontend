@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import InfoTechRssPosts from './InfoTechRssPosts'
-import styles from './MainComponents.module.css'
+import styles from '../MainComponents.module.css'
+import {Link} from 'react-router-dom'
+import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 
 const InfoTechRss = () => {
     const [posts , setPosts] = useState([]);
@@ -22,7 +24,10 @@ const InfoTechRss = () => {
     return (
        <div className = {styles.container}>
             <div className = {styles.titleText}>EWHA INFO | Tech Rss
-                <div className = {styles.goText}>MORE</div>
+            <Link to = "/TechRss" className={styles.link}>
+                    <div className = {styles.goText}>MORE</div>
+                    <img src={arrow} alt="arrow" className ={styles.arrow}/>
+                </Link>
             </div>
             <InfoTechRssPosts posts = {posts} loading ={loading} />
         </div>

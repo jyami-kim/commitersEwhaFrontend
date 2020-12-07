@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import CommunitySideProjectPosts from './CommunitySideProjectPosts'
-import styles from './MainComponents.module.css'
+import styles from '../MainComponents.module.css'
+import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 
 const CommunitySideProject = () => {
     const [posts , setPosts] = useState([]);
@@ -22,7 +24,10 @@ const CommunitySideProject = () => {
     return (
        <div className = {styles.container}>
             <div className = {styles.titleText}>EWHA COMMUNITY | Side Project
-                <div className = {styles.goText}>MORE</div>
+                <Link to = "/SideProject" className={styles.link}>
+                    <div className = {styles.goText}>MORE</div>
+                    <img src={arrow} alt="arrow" className ={styles.arrow}/>
+                </Link>
             </div>
             <CommunitySideProjectPosts posts = {posts} loading ={loading} />
         </div>

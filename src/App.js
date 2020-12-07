@@ -13,7 +13,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Route path = "/" exact = {true} component ={Main}/>
-        <Route path = "/Callback" component ={Main}/>
+        <Route path = "/oauth2/redirect" component ={Main}/>
         <Route path = "/MyProfile" component ={MyProfile}/>
         <Route path = "/Ranking" component ={Ranking}/>
         <Route path = "/SideProject" component ={SideProject}/>

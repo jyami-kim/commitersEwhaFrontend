@@ -1,0 +1,74 @@
+.number{
+  height : 5em
+}
+
+.rankingGithubContainer{
+    height : 35em;
+    display: flex;
+    flex-direction: column;
+}
+.subtitleText {
+  margin-top : 4em;
+  margin-bottom : auto;
+  flex : 1;
+  font-family: acumin-pro-wide, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2b2b2b;
+}
+.rankingGithubText{
+  font-family: AppleSDGothicNeo;
+  margin : auto auto auto 0rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #888888;
+ 
+}
+.weekText{
+  font-family: AppleSDGothicNeo;
+  margin : auto auto auto 0em;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #888888;
+  
+}
+
+.blocksContainer{
+    height : 11.188rem;
+}
+.more{
+  font-family: acumin-pro-wide, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5f8276;
+  margin : auto 0.5rem auto auto;
+}
+.rowBox{
+  display : flex;
+  flex-direction: row;
+  height : 1.5rem;
+  margin-bottom : 2.25rem
+}
+.rowBox2{
+  display : flex;
+  flex-direction: row;
+  height : 1.5rem;
+  margin-top : 3.938rem;
+  margin-bottom : 2.25rem
+}
+.link{
+  margin: auto 0rem auto 0rem;
+  padding: 0;
+  overflow:auto;
+  display : flex;
+  flex-direction: row;
+
+}

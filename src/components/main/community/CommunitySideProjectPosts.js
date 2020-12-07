@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './CommunitySideProjectPosts.module.css'
+import commentIcon from '../../../assets/icon/heartcomment/icon_comment_green@3x.png'
+import heartIcon from '../../../assets/icon/heartcomment/icon_heart_red@3x.png'
 
 const CommunitySideProjectPosts = ({posts, loading}) => {
 
@@ -21,7 +23,12 @@ const CommunitySideProjectPosts = ({posts, loading}) => {
                             <div className = {styles.infoBox}>
                                 <div className ={styles.postName}>{post.name}</div>
                                 <div className ={styles.postDetail}>{post.email} / 2020.10.11</div>
-                                <div className ={styles.rowBox}>comment like</div>
+                                <div className ={styles.rowBox}>
+                                    <img src={commentIcon} alt="comment"/>
+                                    <div>12{/*post.comment Number*/}</div>
+                                    <img src={heartIcon} alt="heart" style = {{marginLeft : '0.75rem'}}/>
+                                    <div>8</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -36,7 +43,12 @@ const CommunitySideProjectPosts = ({posts, loading}) => {
                             <div className = {styles.infoBox}>
                                 <div className ={styles.postName}>{post.name}</div>
                                 <div className ={styles.postDetail}>{post.email} / 2020.10.11</div>
-                                <div className ={styles.rowBox}>comment like</div>
+                                <div className ={styles.rowBox}>
+                                    <img src={commentIcon} alt="comment"/>
+                                    <div>12{/*post.comment Number*/}</div>
+                                    <img src={heartIcon} alt="heart" style = {{marginLeft : '0.75rem'}}/>
+                                    <div>8</div>
+                                </div>
                             </div>
                         </div>
                     </div>

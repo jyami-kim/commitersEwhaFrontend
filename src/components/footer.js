@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css'
-import logo from '../assets/logo/logo_winter@3x.png'
+import logo from '../assets/logo/white_logo@3x.png'
 
 //로고 흰색 뽑아달라하기
 const Footer = () => {

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
-import styles from './MainComponents.module.css'
+import styles from '../MainComponents.module.css'
 import InfoNoticePosts from './InfoNoticePosts'
 import InfoJobPosts from './InfoJobPosts'
+import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 
 const InfoNotice = () => {
 
@@ -48,14 +49,20 @@ const InfoNotice = () => {
             <div className ={styles.containerRow}>
                 <div className = {styles.postBox}>
                     <div className = {styles.subtitle}>컴퓨터공학과 공지사항
-                        <div className = {styles.goText}>WEBSITE로 바로가기</div>
+                        <a href="http://cse.ewha.ac.kr/" className={styles.link2}>
+                            <div className = {styles.goText}>WEBSITE로 바로가기</div>
+                            <img src={arrow} alt="arrow" className ={styles.arrow}/>
+                        </a>
                     </div>
                     <InfoNoticePosts posts = {currentPosts} loading = {loading}/>
                 </div>
                
                 <div className = {styles.postBox2}>
                     <div className = {styles.subtitle}>인턴&취업
+                     <a href="http://cse.ewha.ac.kr/" className={styles.link}>
                         <div className = {styles.goText}>WEBSITE로 바로가기</div>
+                        <img src={arrow} alt="arrow" className ={styles.arrow}/>
+                    </a>
                     </div>
                     <InfoJobPosts posts = {currentPostsJob} loading = {loading_job}/>
                     <div className = {styles.cafeButton}>

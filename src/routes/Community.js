@@ -7,7 +7,6 @@ import Pagination from '../components/community/Pagination'
 import Inputs from '../components/community/Inputs.js'
 
 
-
 const Community = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);

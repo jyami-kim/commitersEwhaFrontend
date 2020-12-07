@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import styles from'./RankingBaekjun.module.css'
+import arrow from '../../assets/icon/myProfile/arrow@3x.png'
 import axios from 'axios'
+
 
 const RankingBaekjun = () => {
 
@@ -25,8 +27,14 @@ const RankingBaekjun = () => {
     }
     return (
      
-        <div className = {styles.container}> 
-            <div className ={styles.titleText}>EWHA RANKING | 백준</div>
+        <div className = {styles.container}>
+            <div className = {styles.rowBox}>
+                <div className ={styles.titleText}>EWHA RANKING | 백준</div>
+                <a target="_blank" href="https://www.acmicpc.net/" className = {styles.link}>
+                    <div className = {styles.more}>WEBSITE 바로가기</div>
+                    <img src={arrow} alt="arrow" className = {styles.arrow}/>
+                </a>
+            </div> 
         <div className = {styles.itemBox}>
             <div className = {styles.insideContainerRow}>
                     <div  className = {styles.subText}>이화여자대학교 등수</div>
