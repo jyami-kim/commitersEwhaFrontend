@@ -1,0 +1,54 @@
+.container{
+        display : flex;
+        flex-direction: column;
+        width : 100%;
+        margin-bottom : 12.5rem;
+    
+}
+.rowBox{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
+.info{
+    font-family: AppleSDGothicNeo;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5f8276;
+}
+.postTitle{
+    font-family: AppleSDGothicNeo;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+}
+.blackBox{
+    max-width: 100%;
+    max-height: 254px;
+    margin: 3.25rem 1.5rem 1.25rem 0rem;
+    padding: 218px 20px 12px 325px;
+    border-radius: 10px;
+    background-color: #2b2b2b;
+}
+.greenBox{
+    max-width: 100%;
+    max-height: 254px;
+    margin: 3.25rem 1.5rem 1.25rem 0rem;
+    padding: 218px 20px 12px 325px;
+    border-radius: 10px;
+    background-color: #5f8276;
+}
+.post{
+    width : 100%;
+    overflow-wrap: break-word;
+}
