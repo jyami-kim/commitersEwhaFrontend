@@ -8,17 +8,9 @@ import { GOOGLE_AUTH_URL, GITHUB_AUTH_URL, ACCESS_TOKEN } from '../../constants'
 
 const ProfileCard =() => {
 
-    //const CALLBACK_URI = 'http://localhost:3000/callback'
-    //const CLIENT_ID = "de41637d8bc3a1cdd9bd";
 
     const getGithub = () => {
         console.log("was clicked");
-        //getLogState(true);
-        //xe.preventDefault();
-        //window.location.href=`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${CALLBACK_URI}`;
-        
-        //fetchData();
-        //fetchToken();
         window.location.href = {GOOGLE_AUTH_URL}
     }    
     
