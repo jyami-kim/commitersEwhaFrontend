@@ -18,7 +18,7 @@ import fallText from '../assets/images/main_text_fall@3x.png'
 import summerText from '../assets/images/main_text_summer@3x.png'
 import springText from '../assets/images/main_text_fall@3x.png'
 
-const Main = () => {
+const Main = (props) => {
 
     const [season, setSeason] = useState('');
 
@@ -46,8 +46,6 @@ const Main = () => {
         }
         return <ProfileCard />
     }
-
-    
 
     const INTRO_MESSAGE = `이화여자대학교 개발자를 위한 커밋 이화동산 커뮤니티입니다.\n꾸준한 커밋으로 ${season} 정원사 뱃지를 취득하세요!`;
 
@@ -77,13 +75,11 @@ const Main = () => {
 
 function NewlineText(props) {
     const text = props.text;
-    //const styles = {lineHeight: "1.71", marginLeft: "9.5em" }
     const newText = text.split('\n').map((str, index) =><span key = {index} className ="intro-message-text">{str}<br/></span>);
     return newText;
   }
 
 const setImage =(season) => {
-    
     let image  = winterText;
     if(season === "가을") {image = fallText}
     else if (season === "여름"){image = summerText}
