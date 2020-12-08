@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ACCESS_TOKEN } from '../constants';
 import { Redirect } from 'react-router-dom'
 
-class Auth2RedirectHandler extends Component {
+class OAuth2RedirectHandler extends Component {
     getUrlParameter(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
         var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -23,7 +23,7 @@ class Auth2RedirectHandler extends Component {
             }}/>; 
         } else {
             return <Redirect to={{
-                pathname: "/welcome",
+                pathname: "/error",
                 state: { 
                     from: this.props.location,
                     error: error 
@@ -33,4 +33,4 @@ class Auth2RedirectHandler extends Component {
     }
 }
 
-export default Auth2RedirectHandler;
+export default OAuth2RedirectHandler;

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './ProfileCard.css'
-import styles from '../../routes/css/Main.module.css'
+import styles from '../../routes/css/Dashboard.module.css'
 import ProfileCardLogged from './ProfileCardLogged'
 import axios from 'axios'
 import { GOOGLE_AUTH_URL, GITHUB_AUTH_URL, ACCESS_TOKEN } from '../../constants'

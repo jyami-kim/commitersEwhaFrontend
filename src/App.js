@@ -1,20 +1,19 @@
 import {
-  BrowserRouter,
+  Redirect,
   Route,
   Switch
 } from 'react-router-dom';
-import Main from './routes/Main'
 import MyProfile from './routes/MyProfile'
 import Ranking from './routes/Ranking'
 import SideProject from './routes/SideProject'
+import Main from './routes/Main'
 import TechRSS from './routes/TechRSS'
 import Community from './routes/Community'
-import Auth2RedirectHandler from './auth/Auth2RedirectHandler'
+import OAuth2RedirectHandler from './auth/OAuth2RedirectHandler'
 import React, { Component } from 'react';
 import { getCurrentUser } from './utils/APIUtils';
 import { ACCESS_TOKEN } from './constants';
 import './App.css';
-import Welcome from './routes/Welcome';
 import PrivateRoute from './common/PrivateRoute';
 import LoadingIndicator from './routes/LoadingIndicator';
 
@@ -39,6 +38,7 @@ class App extends Component {
 
     getCurrentUser()
       .then(response => {
+        console.log(response)
         this.setState({
           currentUser: response,
           authenticated: true,
@@ -65,24 +65,19 @@ class App extends Component {
   }
 
   render() {
-    console.log("this.state.authenticated : " + this.state.authenticated)
     if (this.state.loading) {
-      console.log("loading");
       return <LoadingIndicator />
     }
-
-    console.log("this.state.authenticated : " + this.state.authenticated)
     return (
       <div>
-        <Route exact path="/" component={Welcome} />
         <Switch>
-          <PrivateRoute path="/dashboard" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Main} />
+          <Main authenticated={this.state.authenticated}/>
           <PrivateRoute path="/MyProfile" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={MyProfile} />
           <PrivateRoute path="/Ranking" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Ranking} />
           <PrivateRoute path="/SideProject" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={SideProject} />
           <PrivateRoute path="/TechRSS" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={TechRSS} />
           <PrivateRoute path="/Community" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Community} />
-          <Route path="/oauth2/redirect" component={Auth2RedirectHandler} />
+          <Route path="/oauth2/redirect" component={OAuth2RedirectHandler} />
         </Switch>
       </div>
     )
