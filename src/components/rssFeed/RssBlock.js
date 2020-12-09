@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 
 export class RssBlock extends Component {
     
-
     render() {
         let imageBlock;
         

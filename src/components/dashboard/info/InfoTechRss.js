@@ -4,6 +4,7 @@ import InfoTechRssPosts from './InfoTechRssPosts'
 import styles from '../MainComponents.module.css'
 import {Link} from 'react-router-dom'
 import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
+import {getAllRssWithPage } from '../../../api/APIRss'
 
 const InfoTechRss = () => {
     const [posts , setPosts] = useState([]);
@@ -14,10 +15,13 @@ const InfoTechRss = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
-            const res = await axios.get('http://49.50.162.81:8080/api/rss');
-            setPosts(res.data.response.rssFeedContents);
-            setLoading(false);
-
+            const res = getAllRssWithPage().then(res => {
+                setPosts(res.response.rssFeedContents);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.log(error);
+            })
         }
         fetchPosts();
     },[]);

@@ -1,10 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component, Redirect } from 'react'
 import './css/Welcome.css'
 import { GOOGLE_AUTH_URL } from '../constants';
 import LoginLogo from '../assets/images/main_text_winter@3x.png'
 
 export class Welcome extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
+        console.log(this.props.authenticated);
+        if(this.props.authenticated){
+            return <Redirect to={{
+                pathname: "/dashboard",
+                state: { from: this.props.location }
+            }}/>; 
+        }
         return (
             <div>
                 <h2>Welcome</h2>
