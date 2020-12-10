@@ -21,7 +21,7 @@ export class Dashboard extends Component {
 
     constructor(props) {
         super(props);
-
+        console.log(props)
         this.state = {
             season: '가을',
             seasonImage: fallText,
@@ -66,10 +66,10 @@ export class Dashboard extends Component {
         });
 
         getCurrentGithubInfo()
-            .then(response => {
-                console.log(response)
+            .then(res => {
+                console.log(res.response)
                 this.setState({
-                    currentGithubUser: response,
+                    currentGithubUser: res.response,
                     githubAuth: true,
                     loading: false
                 });
@@ -84,7 +84,7 @@ export class Dashboard extends Component {
         //리다이랙트 되면 logged, 아닐 경우 profilecard
         const setProfileCard = () => {
             if (this.state.githubAuth) {
-                return <GithubProfileCard />
+                return <GithubProfileCard user={this.props.currentUser} githubUser={this.state.currentGithubUser} />
             }
             return <GithubLoginCard />
 

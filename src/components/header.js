@@ -27,7 +27,7 @@ const Header = ({sectionName, season}) => {
 
     return(
             <div className ="header-container">
-                <Link to = "/" className="logo-box"><img src={setImage(season)} alt="logo winter" className = "logo"/></Link>
+                <Link to = "/dashboard" className="logo-box"><img src={setImage(season)} alt="logo winter" className = "logo"/></Link>
                 <div className="header-nav">
                     <Link to = "/Ranking" style={sectionName ==="Ranking" ? styleCurrent :styleDefault}>이화랭킹</Link>
                     <Link to = "/Community" style={sectionName ==="Community" ? styleCurrent :styleDefault}>커뮤니티</Link>

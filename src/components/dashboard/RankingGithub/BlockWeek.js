@@ -12,15 +12,15 @@ const BlockWeek = ({blocks,loading}) => {
     return (
   
       <div className = {styles.container}>
-        {blocks.map(block => (
-          <div key = {block.id} className = {styles.containerGray}>
+        {blocks.map((block, i) => (
+          <div key = {i} className = {styles.containerGray}>
             <div className = {styles.number}>
-              <div className = {styles.text}>{block.id}</div>
+              <div className = {styles.text}>{i + 1}</div>
             </div>
-            <div className = {styles.profile} ></div>
+            <div className = { styles.profile } style={{backgroundImage: "url(" + block.profile + ")"}} ></div>
             <div className = {styles.itemBox}>
-              <div className = {styles.text}>{ block.title.length > 6 ? block.title.slice(0,5) : block.title }</div>
-              <div className = {styles.pointText}>230점</div>
+              <div className = {styles.text}>{ block.authorId.length > 6 ? block.authorId.slice(0,5) : block.authorId }</div>
+            <div className = {styles.pointText}>{block.score}점</div>
             </div>
             
           </div>

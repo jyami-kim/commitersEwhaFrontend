@@ -19,12 +19,12 @@ const BlockWeather = ({blocks,loading}) => {
 
   return (
       <div className ={styles.scroll}>
-      {blocks.map(block => (
-        <div key = {block.id} className = {block.id < 4 ? styles.containerYellow : styles.containerGray}>
-          <div className = {styles.rank}>{block.id}등</div>
-          <div className = {styles.profile} ></div>
-          <div className = {styles.usernameText}>{ block.title.length > 6 ? block.title.slice(0,5) : block.title }</div>
-          <div className = {styles.pointText}>{block.userID}1000점</div>
+      {blocks.map((block, i) => (
+        <div key = {i} className = {i+1 < 4 ? styles.containerYellow : styles.containerGray}>
+          <div className = {styles.rank}>{i+1}등</div>
+          <div className = { styles.profile } style={{backgroundImage: "url(" + block.profile + ")"}} ></div>
+          <div className = {styles.usernameText}>{ block.authorId.length > 6 ? block.authorId.slice(0,5) : block.authorId }</div>
+          <div className = {styles.pointText}>{block.score}점</div>
         </div>
       ))}
       </div>

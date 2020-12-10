@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import CommunitySideProjectPosts from './CommunitySideProjectPosts'
 import styles from '../MainComponents.module.css'
 import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
+import {getDashboardProjectPost} from '../../../api/ApiPost';
 
 const CommunitySideProject = () => {
     const [posts , setPosts] = useState([]);
@@ -14,10 +15,14 @@ const CommunitySideProject = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
-            const res = await axios.get('https://jsonplaceholder.typicode.com/comments');
-            setPosts(res.data);
-            setLoading(false);
-
+            const res = getDashboardProjectPost().then(res => {
+                console.log(res.response);
+                setPosts(res.response.content);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.log(error);
+            })
         }
         fetchPosts();
     },[]);
@@ -29,7 +34,7 @@ const CommunitySideProject = () => {
                     <img src={arrow} alt="arrow" className ={styles.arrow}/>
                 </Link>
             </div>
-            <CommunitySideProjectPosts posts = {posts} loading ={loading} />
+            {/* <CommunitySideProjectPosts posts = {posts} loading ={loading} /> */}
         </div>
     )
 }

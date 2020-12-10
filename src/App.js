@@ -41,10 +41,10 @@ class App extends Component {
     });
 
     getCurrentUser()
-      .then(response => {
-        console.log(response)
+      .then(res => {
+        console.log(res)
         this.setState({
-          currentUser: response,
+          currentUser: res.response,
           authenticated: true,
           loading: false
         });
@@ -66,6 +66,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log(localStorage.getItem(ACCESS_TOKEN))
     this.loadCurrentlyLoggedInUser();
   }
 
@@ -76,7 +77,7 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <PrivateRoute path="/Dashboard" component={Dashboard} onLogout={this.handleLogout} authenticated={this.state.authenticated} currentUser={this.props.currentUser} />
+          <PrivateRoute path="/Dashboard" component={Dashboard} onLogout={this.handleLogout} authenticated={this.state.authenticated} currentUser={this.state.currentUser} />
           <Route exact path="/" component={Welcome} authenticated={this.state.authenticated} onLogout={this.handleLogout}/>
           <PrivateRoute path="/MyProfile" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={MyProfile} />
           <PrivateRoute path="/Ranking" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Ranking} />

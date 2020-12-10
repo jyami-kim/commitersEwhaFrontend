@@ -16,6 +16,7 @@
     margin : auto 1.375rem auto 1.375rem;
     border: solid 0.063rem #5f8276;
     border-radius : 1.5rem;
+    background-size: 3rem;
 }
 .containerGray{
     display: flex;

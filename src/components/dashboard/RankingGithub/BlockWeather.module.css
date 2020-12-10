@@ -43,6 +43,7 @@
     margin: 0.75rem auto 0.75rem auto;
     border: solid 0.063rem #fbb109;
     border-radius: 1.5rem;
+    background-size: 3rem;
 }
 
 .usernameText{

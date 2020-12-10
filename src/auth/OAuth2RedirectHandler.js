@@ -13,6 +13,7 @@ class OAuth2RedirectHandler extends Component {
 
     render() {        
         const token = this.getUrlParameter('token');
+        const githubToken = this.getUrlParameter('github-token');
         const error = this.getUrlParameter('error');
         if(token) {
             localStorage.setItem(ACCESS_TOKEN, token);
@@ -20,7 +21,12 @@ class OAuth2RedirectHandler extends Component {
                 pathname: "/dashboard",
                 state: { from: this.props.location }
             }}/>; 
-        } else {
+        }if(githubToken){
+            return <Redirect to={{
+                pathname: "/dashboard",
+                state: { from: this.props.location }
+            }}/>; 
+        }else {
             console.log("error");
             return <Redirect to={{
                 pathname: "/error",
