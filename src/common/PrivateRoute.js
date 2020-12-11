@@ -1,25 +1,31 @@
 import React from 'react';
 import {
-    Route,
-    Redirect
-  } from "react-router-dom";
+  Route,
+  Redirect
+} from "react-router-dom";
 
-const PrivateRoute = ({ component: Component, authenticated, ...rest }) => (
-    <Route
-      {...rest}
+class PrivateRoute extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (<Route
+      {...this.props.rest}
       render={props =>
-        authenticated ? (
-          <Component {...rest} {...props} />
+        this.props.authenticated ? (
+          <this.props.component {...this.props.rest} {...props} />
         ) : (
-          <Redirect
-            to={{
-              pathname: '/',
-              state: { from: props.location }
-            }}
-          />
-        )
+            <Redirect
+              to={{
+                pathname: '/',
+                state: { from: props.location }
+              }}
+            />
+          )
       }
-    />
-);
-  
+    />)
+  }
+}
+
 export default PrivateRoute

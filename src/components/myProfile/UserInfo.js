@@ -23,7 +23,7 @@ class UserInfo extends Component {
                 <div className={styles.rowBox}>
                     <div className={styles.item1}>
                         <div className={styles.subtitle}>자기소개</div>
-                        <div className = {styles.text}>{this.props.user.description ? user.description: defaultDescription}</div>
+                        {/* <div className = {styles.text}>{this.props.user.description ? this.props.user.description: defaultDescription}</div> */}
                     </div>
                     <div className={styles.item2}>
                         <div className={styles.subtitle}>Profile</div>

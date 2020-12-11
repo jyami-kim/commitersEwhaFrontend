@@ -12,82 +12,87 @@ import InfoTechRss from '../components/dashboard/info/InfoTechRss'
 import InfoNotice from '../components/dashboard/info/InfoNotice'
 import styles from './css/Dashboard.module.css'
 import { getCurrentGithubInfo } from '../api/APIUtils';
-import winterText from '../assets/images/main_text_winter@3x.png'
-import fallText from '../assets/images/main_text_fall@3x.png'
-import summerText from '../assets/images/main_text_summer@3x.png'
-import springText from '../assets/images/main_text_fall@3x.png'
+
+
+import './css/Welcome.css'
+import { GOOGLE_AUTH_URL, ACCESS_TOKEN } from '../constants';
+import LoginLogo from '../assets/images/main_text_winter@3x.png'
+import { connect } from 'react-redux';
+import { receiveValue } from '../actions';
+import { getCurrentUser } from '../api/APIUtils'
+import { getEwhaJobInfo } from '../api/APIScrap'
 
 export class Dashboard extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            season: '가을',
-            seasonImage: fallText,
             loading: false,
-            githubAuth: false,
-            currentGithubUser: false,
+            // githubAuth: false,
+            // currentGithubUser: false,
             page: 0,
             click: null
         };
-        this.fetchSeason = this.fetchSeason.bind(this);
-        this.loadGithubUserInfoInUser = this.loadGithubUserInfoInUser.bind(this);
     }
 
-    fetchSeason() {
-        let month = new Date().getMonth() + 1;
-        if (month = 12 || month <= 2) {
-            this.setState({
-                season: '겨울',
-                seasonImage: winterText
-            })
-        } else if (month >= 3 && month <= 5) {
-            this.setState({
-                season: '봄',
-                seasonImage: springText
-            })
-        } else if (month >= 6 && month <= 8) {
-            this.setState({
-                season: '여름',
-                seasonImage: summerText
-            })
-        }
-    }
 
     componentDidMount() {
-        this.loadGithubUserInfoInUser();
-        this.fetchSeason();
+        console.log(this.props)
+        console.log(this.props.seasonImage)
+        this.props.saveSeaon();
+        // this.loadGithubUserInfoInUser();
+        let user = () => {
+            getCurrentUser()
+                .then(res => {
+                    this.props.saveAuth(true)
+                    this.props.saveUser(res.response)
+                    console.log(this.props)
+                }).catch(error => {
+                    console.log(error)
+                });
+        }
+        let githubUser = () => {
+            // this.setState({
+            //     loading: true
+            // });
+
+            getCurrentGithubInfo()
+                .then(res => {
+                    this.props.saveAuth(true)
+                    this.props.saveAuth(res.response)
+                    console.log(this.props)
+                }).catch(error => {
+                    console.log(error)
+                });
+        }
+        if(localStorage.getItem(ACCESS_TOKEN)){
+            user();
+            // githubUser();
+        }
+        
+        
     }
 
-    loadGithubUserInfoInUser() {
-        this.setState({
-            loading: true
-        });
-
-        getCurrentGithubInfo()
-            .then(res => {
-                console.log(res.response)
-                this.setState({
-                    currentGithubUser: res.response,
-                    githubAuth: true,
-                    loading: false
-                });
-            }).catch(error => {
-                this.setState({
-                    loading: false
-                });
-            });
-    }
 
     render() {
-        //리다이랙트 되면 logged, 아닐 경우 profilecard
-        const setProfileCard = () => {
-            if (this.state.githubAuth) {
-                return <GithubProfileCard user={this.props.currentUser} githubUser={this.state.currentGithubUser} />
-            }
-            return <GithubLoginCard />
-
+        if (!this.props.authenticated) {
+            return (
+                <div>
+                    <h2>Welcome</h2>
+                    <a className="btn btn-block social-btn google" href={GOOGLE_AUTH_URL}>
+                        <img src={LoginLogo} alt="Login" /></a>
+                        {this.props.season}
+                </div>
+            )
         }
+
+        //리다이랙트 되면 logged, 아닐 경우 profilecard
+        // const setProfileCard = () => {
+        //     if (this.state.githubAuth) {
+        //         return <GithubProfileCard user={this.props.currentUser} githubUser={this.state.currentGithubUser} />
+        //     }
+        //     return <GithubLoginCard />
+        // }
 
         function NewlineText(props) {
             const text = props.text;
@@ -99,7 +104,7 @@ export class Dashboard extends Component {
 
         return (
             <div className="main-container">
-                <a onClick={this.props.onLogout}>Logout</a>
+                {/* <a onClick={this.props.onLogout}>Logout</a> */}
                 <Header season={this.state.season}></Header>
                 <div className={styles.mainBody}>
                     <Link to="/">
@@ -108,7 +113,7 @@ export class Dashboard extends Component {
                     <div className={styles.introMessage}>
                         <NewlineText text={INTRO_MESSAGE} />
                     </div>
-                    {setProfileCard()}
+                    {/* {setProfileCard()} */}
                     <RankingGithub />
                     <RankingBaekjun />
                     <CommunitySpace />
