@@ -49,6 +49,7 @@ img{
     height: fit-content;  
     margin :0em 3.75rem 0em 0em;
     white-space: nowrap; 
+    cursor: pointer;
 }
 .title{
     font-family: AcuminProWide;
@@ -91,6 +92,7 @@ img{
 .profileCircle{
     width: 4.375rem;
     height: 4.375rem;
+    background-size: 4.375rem;
     border: solid 0.3rem #fff;
     box-shadow: 0 0 0 1px #5f8276;
     border-radius: 50%;

@@ -71,7 +71,7 @@
 }
 .profile-rowContainer-with-border{
   display : flex;
-  flex-direction: row;
+  flex-direction: column;
   border: 0.063rem solid #d5d5d5;
  
  

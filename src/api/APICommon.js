@@ -1,4 +1,5 @@
 import { ACCESS_TOKEN } from '../constants';
+import axios from 'axios'
 
 export const request = (options) => {
     const headers = new Headers({

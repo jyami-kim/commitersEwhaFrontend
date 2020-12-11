@@ -1,5 +1,6 @@
 import { API_BASE_URL, ACCESS_TOKEN, GITHUB_AUTH_URL } from '../constants';
 import { request, authRquest } from './APICommon';
+const axios = require('axios');
 
 export function getCurrentUser() {
     return authRquest({

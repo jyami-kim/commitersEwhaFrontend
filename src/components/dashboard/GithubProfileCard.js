@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './ProfileCard.css'
 import { getMyCommitMap } from '../../api/APIGithub'
 import { getMyRanking } from '../../api/APIRank'
+import CommitBox from './CommitBox';
 
 export class GithubProfileCard extends Component {
 
@@ -56,20 +57,10 @@ export class GithubProfileCard extends Component {
             });
     }
 
-    getStartDate(){
-        let numWeeks = 52;
-        let now = new Date();
-        now.setDate(now.getDate() - numWeeks * 7);
-        let day = now.getDay();
-        now.setDate(now.getDate() - day);
-        return now;
-    }
-
     componentDidMount() {
         this.loadUserRankScore();
         console.log(new Date())
     }
-
 
 
     render() {
@@ -88,7 +79,7 @@ export class GithubProfileCard extends Component {
                             </div>
                             <div className="profile-box-no-border">
                                 <div className="commit-profile">연속 커밋</div>
-                                <div className="number-profile">{this.state.rankScore != null ? this.state.rankScore.quarterRank.commitMaxCombo: 0} 개</div>
+                                <div className="number-profile">{this.state.rankScore != null ? this.state.rankScore.quarterRank.commitMaxCombo : 0} 개</div>
                             </div>
                         </div>
                     </div>
@@ -96,7 +87,10 @@ export class GithubProfileCard extends Component {
                     <div className="itembox2-profile">
                         <div className="subtitle-profile">커밋동산</div>
                         <div className="contribution-profile">273 contributions last year</div>
-                        <div className="profile-graybox"></div>
+                        {this.state.commitMapLoading ?
+                            <div className="profile-graybox"></div> :
+                            <CommitBox className="profile-graybox" commitMap={this.state.commitMap}></CommitBox>
+                        }
                     </div>
 
                 </div>

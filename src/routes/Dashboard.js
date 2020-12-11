@@ -21,7 +21,6 @@ export class Dashboard extends Component {
 
     constructor(props) {
         super(props);
-        console.log(props)
         this.state = {
             season: '가을',
             seasonImage: fallText,

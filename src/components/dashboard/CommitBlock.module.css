@@ -1,0 +1,16 @@
+.box{
+    width: 13px;
+    height: 13px;
+    background-color: #ededed;
+}
+
+.hoverBox{
+    position: absolute;
+    padding: 7px;
+    border-radius: 10px;
+    z-index: 1;
+    size: 0.3rem;
+    opacity: 0.8;
+    background-color: #000000;
+    color: #ffffff;
+}

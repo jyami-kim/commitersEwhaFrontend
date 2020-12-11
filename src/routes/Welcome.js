@@ -7,14 +7,8 @@ export class Welcome extends Component {
     constructor(props) {
         super(props);
     }
+
     render() {
-        console.log(this.props.authenticated);
-        if(this.props.authenticated){
-            return <Redirect to={{
-                pathname: "/dashboard",
-                state: { from: this.props.location }
-            }}/>; 
-        }
         return (
             <div>
                 <h2>Welcome</h2>

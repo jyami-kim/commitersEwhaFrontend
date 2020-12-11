@@ -1,90 +1,101 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styles from './UserInfo.module.css'
 
-const UserInfo = ({loading, user}) => {
+class UserInfo extends Component {
 
-    const intro = "안녕하세요, 개발을 공부중인 김민정입니다. 백엔드 자바.. 열심히 공부중입니다. 지금은 이화동산 커미터스 웹사이트를 사이드 프로젝트로 진행하고 있습니다. 이화 학생들이 학교에서 진행한 프로젝트를 컴퓨터공학과 사이트에 올리고, 학생들이 만든 프로젝트를 저희 사이트 를 통해 알리기도 하면서, 이화인 개발자들의 활동을 앞장서고 싶습니다."
-
-    if(loading){
-        <h2>loading</h2>
+    constructor(props){
+        super(props)
+        console.log(this.props.loading)
+        console.log(this.props.user)
     }
-    return (
-        <div className = {styles.container}>
-            <div className = {styles.rowBox}>
-                <div className = {styles.item1}>
-                    <div className = {styles.subtitle}>자기소개</div>
-                    <div className = {styles.text}>{intro}</div>
+
+    render() {
+
+        const defaultDescription = "자기소개를 입력해주세요"
+
+        if (this.props.loading) {
+            console.log(this.props.loading)
+            return <h2>loading</h2>
+        }
+        
+        return (
+            <div className={styles.container}>
+                <div className={styles.rowBox}>
+                    <div className={styles.item1}>
+                        <div className={styles.subtitle}>자기소개</div>
+                        <div className = {styles.text}>{this.props.user.description ? user.description: defaultDescription}</div>
+                    </div>
+                    <div className={styles.item2}>
+                        <div className={styles.subtitle}>Profile</div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>이름</div>
+                            {/* <div className= {styles.info}>{user.name}</div> */}
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>이메일</div>
+                            {/* <div className= {styles.info}>{user.email}</div> */}
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>전공</div>
+                            {/* <div className= {styles.info}>{this.defaultMajor}</div> */}
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>입학년도</div>
+                            {/* <div className= {styles.info}>{user.entranceYear == 0 ? '입학년도' : user.entranceYear}({user.graduate ? '졸업' : '재학'})</div> */}
+                        </div>
+                    </div>
                 </div>
-                <div className = {styles.item2}>
-                    <div className = {styles.subtitle}>Profile</div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>이름</div>
-                        <div className= {styles.info}>김민정</div>
+                <div className={styles.line}></div>
+                <div className={styles.rowBox2}>
+                    <div className={styles.item1}>
+                        <div className={styles.subtitle}>직업/직군</div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>직장명</div>
+                            {/* <div className= {styles.info}>{user.company ? user.company : '직장 없음'}</div> */}
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>직군</div>
+                            {/* <div className= {styles.info}>{user.job ? user.job : '직군을 입력해주세요'}</div> */}
+                        </div>
                     </div>
-                    <div className = {styles.line}></div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>이메일</div>
-                        <div className= {styles.info}>kminjung@ewhain.net</div>
-                    </div>
-                    <div className = {styles.line}></div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>전공</div>
-                        <div className= {styles.info}>컴퓨터공학과</div>
-                    </div>
-                    <div className = {styles.line}></div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>입학년도</div>
-                        <div className= {styles.info}>2017(재학)</div>
+                    <div className={styles.item2}>
+                        <div className={styles.subtitle}>스택</div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.tag}>HTML</div>
+                            <div className={styles.tag}>CSS</div>
+                            <div className={styles.tag}>Javascript</div>
+                            <div className={styles.tag}>Ruby</div>
+                        </div>
                     </div>
                 </div>
+                <div className={styles.rowBox}>
+                    <div className={styles.item1}>
+                        <div className={styles.subtitle}>관심 직군</div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>직군1</div>
+                            <div className={styles.info}>Kakao</div>
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>직군2</div>
+                            <div className={styles.info}>Backend Developer</div>
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.infoBox}>
+                            <div className={styles.infoTitle}>직군2</div>
+                            <div className={styles.info}>Backend Developer</div>
+                        </div>
+                    </div>
+                    <div className={styles.item2}></div>
+                </div>
+
             </div>
-            <div className = {styles.line}></div>
-            <div className = {styles.rowBox2}>
-                <div className = {styles.item1}>
-                    <div className = {styles.subtitle}>직업/직군</div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>직장명</div>
-                        <div className= {styles.info}>Kakao</div>
-                    </div>
-                    <div className = {styles.line}></div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>직군</div>
-                        <div className= {styles.info}>Backend Developer</div>
-                    </div>
-                </div>
-                <div className = {styles.item2}>
-                    <div className = {styles.subtitle}>스택</div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.tag}>HTML</div>
-                        <div className = {styles.tag}>CSS</div>
-                        <div className = {styles.tag}>Javascript</div>
-                        <div className = {styles.tag}>Ruby</div>
-                    </div>
-                </div>
-            </div>
-            <div className = {styles.rowBox}>
-                <div className = {styles.item1}>
-                    <div className = {styles.subtitle}>관심 직군</div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>직군1</div>
-                        <div className= {styles.info}>Kakao</div>
-                    </div>
-                    <div className = {styles.line}></div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>직군2</div>
-                        <div className= {styles.info}>Backend Developer</div>
-                    </div>
-                    <div className = {styles.line}></div>
-                    <div className = {styles.infoBox}>
-                        <div className = {styles.infoTitle}>직군2</div>
-                        <div className= {styles.info}>Backend Developer</div>
-                    </div>
-                </div>
-                <div className = {styles.item2}></div>
-            </div>
-            
-        </div>
-    )
+        )
+    }
 }
 
 export default UserInfo;

@@ -28,7 +28,7 @@ class App extends Component {
       currentUser: null,
       loading: false,
       github: false,
-      currentGithubUser : null
+      currentGithubUser: null
     }
 
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
@@ -72,13 +72,15 @@ class App extends Component {
 
   render() {
     if (this.state.loading) {
+      console.log("loading");
       return <LoadingIndicator />
     }
+
     return (
       <div>
         <Switch>
-          <PrivateRoute path="/Dashboard" component={Dashboard} onLogout={this.handleLogout} authenticated={this.state.authenticated} currentUser={this.state.currentUser} />
-          <Route exact path="/" component={Welcome} authenticated={this.state.authenticated} onLogout={this.handleLogout}/>
+          <Route exact path="/" component={Welcome} authenticated={this.state.authenticated} onLogout={this.handleLogout} />
+          <PrivateRoute path="/dashboard" component={Dashboard} onLogout={this.handleLogout} authenticated={this.state.authenticated} currentUser={this.state.currentUser} />
           <PrivateRoute path="/MyProfile" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={MyProfile} />
           <PrivateRoute path="/Ranking" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={Ranking} />
           <PrivateRoute path="/SideProject" authenticated={this.state.authenticated} currentUser={this.state.currentUser} component={SideProject} />
