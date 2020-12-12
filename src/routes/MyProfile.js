@@ -53,7 +53,7 @@ class MyProfile extends Component {
     render() {
         return (
             <div className={styles.container}>
-                <Header seasonLogo={this.props.seasonLogo} />
+                <Header seasonLogo={this.props.seasonLogo} sectionName = "MyProfile"></Header>
                 <div className={styles.rowBox}>
                     <div className={styles.title}>MY PROFILE</div>
                     <div className={styles.editProfile}>프로필 수정하기</div>

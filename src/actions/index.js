@@ -12,6 +12,8 @@ export const SAVE_GITHUB_INFO = "SAVE_GITHUB_INFO";
 export const GITHUB_AUTH = "GITHUB_AUTH";
 export const SAVE_COMMIT_MAP = "SAVE_COMMIT_MAP";
 export const SAVE_SCORE = "SAVE_SCORE";
+export const SAVE_HOUR_STAT = "SAVE_HOUR_STAT";
+export const SAVE_WEEKDAY_STAT = "SAVE_WEEKDAY_STAT";
 
 
 export function saveStore(type, value){

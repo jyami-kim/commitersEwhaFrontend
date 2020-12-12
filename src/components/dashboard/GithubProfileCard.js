@@ -86,7 +86,6 @@ export class GithubProfileCard extends Component {
 
                     <div className="itembox2-profile">
                         <div className="subtitle-profile">커밋동산</div>
-                        <div className="contribution-profile">273 contributions last year</div>
                         {this.state.commitMapLoading ?
                             <div className="profile-graybox"></div> :
                             <CommitBox className="profile-graybox" commitMap={this.state.commitMap}></CommitBox>

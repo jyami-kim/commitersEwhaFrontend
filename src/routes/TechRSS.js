@@ -40,7 +40,7 @@ export class TechRSS extends Component {
 
         return (
             <div className = "main-container">
-               <Header className= {styles.mainHeader}></Header>
+                <Header seasonLogo={this.props.seasonLogo} sectionName = "TechRss"></Header>
                <div className = "container">
                    <div className = "sub-container">
                         <div className = "tab-title">

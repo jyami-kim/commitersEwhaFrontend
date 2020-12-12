@@ -37,7 +37,7 @@ const SideProject = () => {
 
     return (
         <div className = {styles.container}>
-            <Header sectionName = "SideProject"></Header>
+            <Header seasonLogo={this.props.seasonLogo} sectionName = "SideProject"></Header>
             <div className ={styles.titleBox}>
                 <h2 className = {styles.subtitle}>Ewha Community</h2>
                 <div className = {styles.title}>

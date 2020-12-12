@@ -7,3 +7,17 @@ export function getMyCommitMap() {
         method: 'GET'
     });
 }
+
+export function getMyHourStat() {
+    return authRquest({
+        url: API_BASE_URL + "/api/github/stat/me/time",
+        method: 'GET'
+    });
+}
+
+export function getMyWeekdayStat() {
+    return authRquest({
+        url: API_BASE_URL + "/api/github/stat/me/weekday",
+        method: 'GET'
+    });
+}

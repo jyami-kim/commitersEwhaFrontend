@@ -1,7 +1,7 @@
 import winterLogo from '../assets/logo/logo_winter@3x.png'
 import winterText from '../assets/images/main_text_winter@3x.png'
 
-import { SAVE_USER_INFO, AUTHENTICATION, SAVE_SCORE, SEASON, GITHUB_AUTH, SAVE_GITHUB_INFO, SAVE_COMMIT_MAP } from '../actions';
+import * as actions from '../actions';
 
 const initialState = {
     user: null,
@@ -12,41 +12,51 @@ const initialState = {
     githubInfo: null,
     githubAuth: false,
     commitMap: null,
-    score: null
+    score: null,
+    statHour: null,
+    statWeekDay: null,
 };
 
 const reducer = (state = initialState, action) => {
     console.log(action)
     switch (action.type) {
-        case SAVE_USER_INFO:
+        case actions.SAVE_USER_INFO:
             return Object.assign({}, state, {
                 user: action.payload
             });
-        case AUTHENTICATION:
+        case actions.AUTHENTICATION:
             return Object.assign({}, state, {
                 authenticated: action.payload
             });
-        case SEASON:
+        case actions.SEASON:
             return Object.assign({}, state, {
                 season: action.season,
                 seasonImage: action.seasonImage,
                 seasonLogo: action.seasonLogo
             });
-        case GITHUB_AUTH:
+        case actions.GITHUB_AUTH:
             return Object.assign({}, state, {
                 githubAuth: action.payload
             });
-        case SAVE_GITHUB_INFO:
+        case actions.SAVE_GITHUB_INFO:
             return Object.assign({}, state, {
                 githubInfo: action.payload
             });
-        case SAVE_COMMIT_MAP:
+        case actions.SAVE_COMMIT_MAP:
             return Object.assign({}, state, {
                 commitMap: action.payload
             });
-        case SAVE_SCORE:
+        case actions.SAVE_SCORE:
             return Object.assign({}, state, {
                 score: action.payload
+            });
+        case actions.SAVE_HOUR_STAT:
+            return Object.assign({}, state, {
+                statHour: action.payload
+            });
+        case actions.SAVE_WEEKDAY_STAT:
+            return Object.assign({}, state, {
+                statWeekDay: action.payload
             });
         default:
             return state;

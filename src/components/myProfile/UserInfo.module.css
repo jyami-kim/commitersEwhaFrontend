@@ -26,10 +26,28 @@
   letter-spacing: normal;
   text-align: left;
   color: #2b2b2b;
+  min-height: 13rem;
+}
+.brank{
+  height: 5rem;
 }
 .line{
   border-top : 0.063rem solid #ededed;
   width : 100%;
+}
+.badge{
+  width: 6rem;
+  height: 6rem;
+  background-color: #ededed;
+  border-radius: 8rem;
+  background-size: 8rem;
+  
+}
+.badgeContainer{
+  margin: 1rem;
+}
+.badgeText{
+  text-align: center;
 }
 .subtitle{
   margin : 0rem auto 2rem 0rem;
@@ -50,10 +68,12 @@
 .item2 {
   width : 50%;
 }
+.item3{
+  display: inline-flex;
+}
 .infoBox{
   display: flex;
   flex-direction: row;
-
 }
 .infoTitle{
   margin : 1.75rem auto 1.75rem 0rem;

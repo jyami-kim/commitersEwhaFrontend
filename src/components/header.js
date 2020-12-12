@@ -30,11 +30,11 @@ class Header extends Component {
                 <Link to="/" className="logo-box"><img src={this.props.seasonLogo} alt="logo winter" className="logo" /></Link>
                 <div className="header-nav">
                     <Link to="/Ranking" style={this.props.sectionName === "Ranking" ? styleCurrent : styleDefault}>이화랭킹</Link>
-                    <Link to="/Community" style={this.props.sectionName === "Community" ? styleCurrent : styleDefault}>커뮤니티</Link>
+                    {/* <Link to="/Community" style={this.props.sectionName === "Community" ? styleCurrent : styleDefault}>커뮤니티</Link> */}
                     <Link to="/SideProject" style={this.props.sectionName === "SideProject" ? styleCurrent : styleDefault}>사이드 프로젝트</Link>
                     <Link to="/TechRSS" style={this.props.sectionName === "TechRss" ? styleCurrent : styleDefault}>테크RSS</Link>
-                    <Link to="/notification"><img src={noticeIcon} alt="notification icon" className="icon" /></Link>
-                    <Link to="/MyProfile"><img src={profileIcon} alt="profile icon" className="icon" /></Link>
+                    <Link to="/notification" style={this.props.sectionName === "notification" ? styleCurrent : styleDefault}>공지사항</Link>
+                    <Link to="/MyProfile" style={this.props.sectionName === "MyProfile" ? styleCurrent : styleDefault}>마이페이지</Link>
                 </div>
             </div>
         )

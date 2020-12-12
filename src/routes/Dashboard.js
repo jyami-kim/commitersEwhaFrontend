@@ -27,7 +27,6 @@ export class Dashboard extends Component {
     }
 
     componentDidMount() {
-        // this.props.saveSeason();
         let user = () => {
             getCurrentUser()
                 .then(res => {
@@ -104,7 +103,7 @@ export class Dashboard extends Component {
                     {setProfileCard()}
                     <RankingGithub />
                     <RankingBaekjun />
-                    <CommunitySpace />
+                    {/* <CommunitySpace /> */}
                     <CommunitySideProject />
                     <InfoTechRss />
                     <InfoNotice />
