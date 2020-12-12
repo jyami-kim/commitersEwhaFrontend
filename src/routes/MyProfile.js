@@ -8,6 +8,8 @@ import MyCommitStat from '../components/myProfile/MyCommitStat'
 import UserInfo from '../components/myProfile/UserInfo'
 import { getCurrentGithubInfo, getCurrentUser } from '../api/APIUtils';
 import { ACCESS_TOKEN } from '../constants'
+import { Link } from 'react-router-dom'
+
 
 class MyProfile extends Component {
     constructor(props) {
@@ -24,6 +26,7 @@ class MyProfile extends Component {
                     if (res.status === -200) {
                         this.props.saveAuth(true)
                         this.props.saveCurrentUser(res.response)
+                        this.props.history.push("/MyProfile");
                     }
                     console.log(res);
                 }).catch(error => {
@@ -53,10 +56,10 @@ class MyProfile extends Component {
     render() {
         return (
             <div className={styles.container}>
-                <Header seasonLogo={this.props.seasonLogo} sectionName = "MyProfile"></Header>
+                <Header seasonLogo={this.props.seasonLogo} sectionName="MyProfile"></Header>
                 <div className={styles.rowBox}>
                     <div className={styles.title}>MY PROFILE</div>
-                    <div className={styles.editProfile}>프로필 수정하기</div>
+                    <Link to="/MyProfile/edit" className={styles.editProfile}>프로필 수정하기</Link>
                 </div>
                 <div className={styles.rowBox2}>
                     <div className={styles.nameBox}>
@@ -65,14 +68,14 @@ class MyProfile extends Component {
                     </div>
                     <div className={styles.profileCircle} style={{ backgroundImage: this.props.user && 'url(' + this.props.user.imageUrl + ')' }}></div>
                     <div className={styles.pageBox}>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/">
+                        <a target="_blank" rel="noreferrer" href={this.props.user ? this.props.user.site : "https://github.com"}>
                             <img src={page_website} alt="page logo" />
                         </a>
                         <div className={styles.logoname}>웹사이트</div>
 
                     </div>
                     <div className={styles.pageBox2}>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/">
+                        <a target="_blank" rel="noreferrer" href={this.props.user ? this.props.user.github : "https://github.com"}>
                             <img src={github_logo} alt="github logo" />
                         </a>
                         <div className={styles.logoname}>Github</div>

@@ -91,7 +91,6 @@ export class GithubProfileCard extends Component {
                             <CommitBox className="profile-graybox" commitMap={this.state.commitMap}></CommitBox>
                         }
                     </div>
-
                 </div>
             </div>
         )

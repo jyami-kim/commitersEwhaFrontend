@@ -14,6 +14,11 @@ img{
     flex-direction : row;
     align-items: center;
 }
+.columnBox{
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+}
 .rowBox2{
     display : flex;
     flex-direction : row;
@@ -135,3 +140,6 @@ img{
     border-top : 0.063rem solid #ededed;
     width : 100%;
   }
+.titleMargin{
+    margin: 1.8rem 0rem;
+}

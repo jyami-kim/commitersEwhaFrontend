@@ -15,3 +15,11 @@ export function getCurrentGithubInfo() {
         method: 'GET'
     });
 }
+
+export function updateUserInfo(payload){
+    return authRquest({
+        url: API_BASE_URL + "/api/user",
+        method: 'POST',
+        body: JSON.stringify(payload)
+    });
+}

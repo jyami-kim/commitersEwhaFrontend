@@ -1,0 +1,77 @@
+.input{
+    border: none;
+    width: 80%;
+    line-height: 1.21;
+    padding: 0rem 2rem;
+    text-align: right;
+}
+.inputText{
+    min-height: 10rem;
+    margin-bottom: 2rem;
+}
+.inputTextDefault{
+    min-height: 3rem;
+}
+.inputLeft{
+    text-align: left;
+}
+.input[type="text"] {
+    border: 0px;
+    outline: none;
+}
+.input[type="text"]:focus { 
+    border-bottom: solid 2px #5f8276;
+    
+}
+.entranceInput{
+    width: 10rem;
+}
+.profileCircle{
+    width: 4.375rem;
+    height: 4.375rem;
+    background-size: 4.375rem;
+    border: solid 0.3rem #fff;
+    box-shadow: 0 0 0 1px #5f8276;
+    border-radius: 50%;
+    background-color: #ededed;
+}
+
+input[type=checkbox]{
+    margin: auto 2rem;
+    cursor: pointer;
+}
+
+input[type=checkbox]{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #f7f7f7;
+    border-radius: 2px;
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}
+
+input[type=checkbox]:checked{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 18px; 
+    font-weight:600; 
+    color: #fff;  
+    background-color:#5f8276;
+    text-align: center;   
+}
+
+.editProfile{
+    padding: 0.688rem;
+    width : 6rem;
+    border-radius: 1rem;
+    border: solid 0.063rem #5f8276;
+    font-size: 0.8rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5f8276;
+    background-color: white;
+    margin : 3rem 1rem 1rem auto;
+}
