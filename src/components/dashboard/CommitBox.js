@@ -6,13 +6,16 @@ export class CommitBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            commitBox: {}
+            commitBox: {},
+            total: 0
         }
 
         if (this.props.commitMap) {
-            this.props.commitMap.forEach(c => {
+            const sum = this.props.commitMap.map(c => {
                 this.state.commitBox[c.commitDate] = c.commitCount;
-            })
+                return c.commitCount;
+            }).reduce((total, c) => total += c, 0)
+            this.state.total = sum;
             console.log(this.state.commitBox);
         }
     }
@@ -26,7 +29,7 @@ export class CommitBox extends Component {
             for (var j = 0; j < 52; j++) {
                 row.push(
                     <CommitBlock 
-                    key={j*7+i} 
+                    id={j*7+i} 
                     date={this.getDate(startDate, j * 7 + i)} 
                     count={this.state.commitBox[this.getDate(startDate, j * 7 + i)] ? this.state.commitBox[this.getDate(startDate, j * 7 + i)] : 0} ></CommitBlock>
                 );
@@ -36,6 +39,7 @@ export class CommitBox extends Component {
 
         return (
             <div>
+                <p style={{color: '#888888', fontSize: '12px'}}>{this.state.total} contributions last year</p>
                 <table>
                     {block}
                 </table>

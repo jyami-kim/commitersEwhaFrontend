@@ -9,7 +9,6 @@ class NotFound extends Component {
     }
     render() {
         console.log(this.props.error);
-        console.log(this.state.error);
         return (
             <div className="page-not-found">
                 <h1 className="title">

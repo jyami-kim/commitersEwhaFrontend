@@ -1,6 +1,6 @@
 import * as actions from '../actions';
 import { connect } from 'react-redux';
-import Dashboard from '../routes/Dashboard';
+import MyProfile from '../routes/MyProfile'
 
 const mapStateToProps = (state) => {
     console.log(state)
@@ -11,7 +11,9 @@ const mapStateToProps = (state) => {
         seasonImage: state.seasonImage,
         seasonLogo: state.seasonLogo,
         githubInfo: state.githubInfo,
-        githubAuth: state.githubAuth
+        githubAuth: state.githubAuth,
+        commitMap: state.commitMap,
+        score: state.score
     };
 };
 
@@ -21,11 +23,13 @@ const mapDispatchToProps = (dispatch) => ({
     saveSeaon: () => dispatch(actions.saveSeason()),
     saveGithubInfo: (value) => dispatch(actions.saveStore(actions.SAVE_GITHUB_INFO, value)),
     saveGithubAuth: (value) => dispatch(actions.saveStore(actions.GITHUB_AUTH, value)),
+    saveCommitMap: (value) => dispatch(actions.saveStore(actions.SAVE_COMMIT_MAP, value)),
+    saveScore: (value) => dispatch(actions.saveStore(actions.SAVE_SCORE, value)),
 })
 
-const DashboardContainer = connect(
+const MyProfileContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Dashboard);
+)(MyProfile);
 
-export default DashboardContainer;
+export default MyProfileContainer;

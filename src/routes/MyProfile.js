@@ -1,68 +1,69 @@
-import React, { useState, useEffect, Component } from 'react'
+import React, { Component } from 'react'
 import Header from '../components/Header'
 import styles from './css/MyProfile.module.css'
-import UserInfo from '../components/myProfile/UserInfo'
 import github_logo from '../assets/icon/myProfile/icon_github@3x.png'
 import page_website from '../assets/icon/myProfile/icon_website@3x.png'
-import { getCurrentUser } from "../api/APIUtils"
-import LoadingIndicator from './LoadingIndicator';
 import MyCommitInfo from '../components/myProfile/MyCommitInfo'
 import MyCommitStat from '../components/myProfile/MyCommitStat'
+import UserInfo from '../components/myProfile/UserInfo'
+import { getCurrentGithubInfo, getCurrentUser } from '../api/APIUtils';
+import { ACCESS_TOKEN } from '../constants'
 
 class MyProfile extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            user: null,
-            loading: false,
             selection: 0
         }
-        this.loadingUser = this.loadingUser.bind(this);
-    }
-
-    loadingUser() {
-        this.setState({
-            loading: true
-        });
-        getCurrentUser()
-            .then(res => {
-                console.log(res.response);
-
-                this.setState({
-                    user: res.response,
-                    loading: false
-                });
-            }).catch(error => {
-                this.setState({
-                    loading: false
-                });
-            });
     }
 
     componentDidMount() {
-        this.loadingUser();
+        let user = () => {
+            getCurrentUser()
+                .then(res => {
+                    if (res.status === -200) {
+                        this.props.saveAuth(true)
+                        this.props.saveCurrentUser(res.response)
+                    }
+                    console.log(res);
+                }).catch(error => {
+                    console.log(error)
+                });
+        }
+        let githubUser = () => {
+            getCurrentGithubInfo()
+                .then(res => {
+                    console.log(res);
+                    if (res.status === -200) {
+                        this.props.saveGithubAuth(true)
+                        this.props.saveGithubInfo(res.response)
+                        console.log(this.props)
+                    }
+                }).catch(error => {
+                    console.log(error)
+                });
+        }
+
+        if (!this.props.authenticated && !this.props.githubAuth && localStorage.getItem(ACCESS_TOKEN)) {
+            user();
+            githubUser();
+        }
     }
 
     render() {
-
-        if (this.state.loading) {
-            console.log("loading");
-            return <LoadingIndicator />
-        }
-
         return (
             <div className={styles.container}>
-                <Header />
+                <Header seasonLogo={this.props.seasonLogo} />
                 <div className={styles.rowBox}>
                     <div className={styles.title}>MY PROFILE</div>
                     <div className={styles.editProfile}>프로필 수정하기</div>
                 </div>
                 <div className={styles.rowBox2}>
                     <div className={styles.nameBox}>
-                        <div className={styles.name}>{this.state.user && this.state.user.name}</div>
-                        <div className={styles.jobname}>{this.state.user ? this.state.user.job : '직군을 입력해주세요'}</div>
+                        <div className={styles.name}>{this.props.user && this.props.user.name}</div>
+                        <div className={styles.jobname}>{this.props.user && this.props.user.job ? this.props.user.job : '직군을 입력해주세요'}</div>
                     </div>
-                    <div className={styles.profileCircle} style={{ backgroundImage: this.state.user && 'url(' + this.state.user.imageUrl + ')' }}></div>
+                    <div className={styles.profileCircle} style={{ backgroundImage: this.props.user && 'url(' + this.props.user.imageUrl + ')' }}></div>
                     <div className={styles.pageBox}>
                         <a target="_blank" rel="noreferrer" href="https://github.com/">
                             <img src={page_website} alt="page logo" />
@@ -87,14 +88,13 @@ class MyProfile extends Component {
                         onClick={() => this.setState({ selection: 2 })}>통계</div>
                 </div>
                 <div className={styles.line}></div>
-                {this.state.selection == 1 ? <MyCommitInfo /> :
-                    this.state.selection == 2 ? <MyCommitStat /> :
-                        <UserInfo loading={this.state.loading} user={this.state.user} />}
+                {this.state.selection == 1 ? <MyCommitInfo props={this.props} /> :
+                    this.state.selection == 2 ? <MyCommitStat props={this.props} /> :
+                        <UserInfo props={this.props} />}
 
             </div>
         )
     }
-
 }
 
 export default MyProfile;

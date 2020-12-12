@@ -7,6 +7,7 @@
 }
 .logo {
     max-width : 6em;
+    margin-top: 2rem;
 }
 .logo-box {
     flex :1;
@@ -45,4 +46,25 @@
     max-height: 3rem;
     object-fit: contain;
     margin-left : 0.25rem;
+}
+.hover-icon{
+  width: 79px;
+  height: 19px;
+  padding: 0.3rem 1.2rem;
+  text-align: center;
+  margin:0.2rem;
+  
+  text-decoration: none;
+  border-radius: 5px;
+  border: solid 1px #00462a;
+  background-color: #5f8276;
+  color: white;
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+}
+
+.hover-block{
+    margin-top: 0.5rem;
+    float: right;
 }

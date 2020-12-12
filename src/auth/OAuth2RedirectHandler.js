@@ -3,6 +3,7 @@ import { ACCESS_TOKEN } from '../constants';
 import { Redirect } from 'react-router-dom'
 
 class OAuth2RedirectHandler extends Component {
+
     getUrlParameter(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
         var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -11,30 +12,32 @@ class OAuth2RedirectHandler extends Component {
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     };
 
-    render() {        
+    render() {
         const token = this.getUrlParameter('token');
         const githubToken = this.getUrlParameter('github-token');
         const error = this.getUrlParameter('error');
-        if(token) {
+        if (token) {
+            console.log(token)
             localStorage.setItem(ACCESS_TOKEN, token);
+            this.props.saveAuth(true)
             return <Redirect to={{
-                pathname: "/dashboard",
+                pathname: "/",
                 state: { from: this.props.location }
-            }}/>; 
-        }if(githubToken){
+            }} />;
+        } if (githubToken) {
             return <Redirect to={{
-                pathname: "/dashboard",
+                pathname: "/",
                 state: { from: this.props.location }
-            }}/>; 
-        }else {
+            }} />;
+        } else {
             console.log("error");
             return <Redirect to={{
                 pathname: "/error",
-                state: { 
+                state: {
                     from: this.props.location,
-                    error: error 
+                    error: error
                 }
-            }}/>; 
+            }} />;
         }
     }
 }

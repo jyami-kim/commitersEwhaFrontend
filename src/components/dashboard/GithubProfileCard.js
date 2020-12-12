@@ -67,8 +67,8 @@ export class GithubProfileCard extends Component {
         return (
             <div className="profileCard-container">
                 <div className="profile-title-logged">MY PROFILE</div>
-                <div className="username-profile">{this.props.githubUser.authorId}</div>
-                <div className="info-detail-profile">{this.props.user.name}</div>
+                <div className="username-profile">{this.props.githubUser&& this.props.githubUser.authorId}</div>
+                <div className="info-detail-profile">{this.props.user && this.props.user.name}</div>
                 <div className="profile-rowContainer">
                     <div className="itembox-profile">
                         <div className="subtitle-profile">EWHA SCORE {this.state.rankScore != null ? this.state.rankScore.quarterRank.score : ''}</div>
