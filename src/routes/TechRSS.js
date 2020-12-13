@@ -36,8 +36,6 @@ export class TechRSS extends Component {
         const dataToRender = this.state.mockData.rssFeedContents.filter(data => this.state.click == null || data.company == this.state.click)
         const pageIndex = Math.ceil(dataToRender.length/10)
 
-
-
         return (
             <div className = "main-container">
                 <Header seasonLogo={this.props.seasonLogo} sectionName = "TechRss"></Header>

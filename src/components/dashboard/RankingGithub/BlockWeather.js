@@ -23,7 +23,7 @@ const BlockWeather = ({blocks,loading}) => {
         <div key = {i} className = {i+1 < 4 ? styles.containerYellow : styles.containerGray}>
           <div className = {styles.rank}>{i+1}등</div>
           <div className = { styles.profile } style={{backgroundImage: "url(" + block.profile + ")"}} ></div>
-          <div className = {styles.usernameText}>{ block.authorId.length > 6 ? block.authorId.slice(0,5) : block.authorId }</div>
+          <div className = {styles.usernameText}>{ block.name.length > 6 ? block.name.slice(0,5) : block.name }</div>
           <div className = {styles.pointText}>{block.score}점</div>
         </div>
       ))}

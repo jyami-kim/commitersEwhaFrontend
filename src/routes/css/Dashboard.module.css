@@ -54,3 +54,27 @@ img{
     flex-direction: column;
     
 }
+
+.landingBackground{
+    background-color: #000000;
+    min-height: 70rem;
+    padding: 0rem 7rem;
+}
+
+.landingBox{
+    padding: 7rem 0rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.rowBox{
+    text-align: center;
+}
+.textBox{
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}

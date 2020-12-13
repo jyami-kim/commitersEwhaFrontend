@@ -22,6 +22,9 @@ class MyProfileEdit extends Component {
             wantJob1: this.props.user.wantJob1,
             wantJob2: this.props.user.wantJob2,
             wantJob3: this.props.user.wantJob3,
+            github: this.props.user.github,
+            site: this.props.user.site,
+            devStacks: this.props.user.devStacks
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);

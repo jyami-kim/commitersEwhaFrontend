@@ -19,7 +19,7 @@ const BlockWeek = ({blocks,loading}) => {
             </div>
             <div className = { styles.profile } style={{backgroundImage: "url(" + block.profile + ")"}} ></div>
             <div className = {styles.itemBox}>
-              <div className = {styles.text}>{ block.authorId.length > 6 ? block.authorId.slice(0,5) : block.authorId }</div>
+              <div className = {styles.text}>{ block.name.length > 6 ? block.name.slice(0,5) : block.name }</div>
             <div className = {styles.pointText}>{block.score}점</div>
             </div>
             

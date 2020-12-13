@@ -6,15 +6,15 @@ import GithubLoginCard from '../components/dashboard/GithubLoginCard'
 import GithubProfileCard from '../components/dashboard/GithubProfileCard'
 import RankingGithub from '../components/dashboard/RankingGithub/RankingGithub'
 import RankingBaekjun from '../components/dashboard/RankingBaekjun.js'
-import CommunitySpace from '../components/dashboard/community/CommunitySpace.js'
 import CommunitySideProject from '../components/dashboard/community/CommunitySideProject.js'
 import InfoTechRss from '../components/dashboard/info/InfoTechRss'
 import InfoNotice from '../components/dashboard/info/InfoNotice'
 import styles from './css/Dashboard.module.css'
 import { getCurrentGithubInfo, getCurrentUser } from '../api/APIUtils';
-import './css/Welcome.css'
 import { GOOGLE_AUTH_URL, ACCESS_TOKEN } from '../constants';
-import LoginLogo from '../assets/images/main_text_winter@3x.png'
+import LandingTextLogo from '../assets/images/signin_text@3x.png'
+import LandingLogin from '../assets/images/button_google@3x.png'
+import LandingLogo from '../assets/logo/logo_landing.gif'
 
 export class Dashboard extends Component {
 
@@ -63,13 +63,11 @@ export class Dashboard extends Component {
     render() {
         if (!this.props.authenticated) {
             return (
-                <div>
-                    <h2>Welcome</h2>
-                    <a className="btn btn-block social-btn google" href={GOOGLE_AUTH_URL}>
-                        <img src={LoginLogo} alt="Login" /></a>
-                        {this.props.season}
-                        {this.props.seasonLogo}
-                        {this.props.authenticated ? 'true' : 'false'}
+                <div className={styles.landingBackground}>
+                    <div className={styles.landingBox}><img width="50%" src={LandingLogo} alt="landing" /></div>
+                    <div className={styles.rowBox}><img width="35%" src={LandingTextLogo} alt="landgin" /></div>
+                    <p className={styles.textBox}>*이화인 메일(@ewhain.net)로 로그인 해주세요.</p>
+                    <div className={styles.rowBox}><a className={styles.landingBox} href={GOOGLE_AUTH_URL}><img width="13%" src={LandingLogin} alt="landgin" /></a></div>
                 </div>
             )
         }
@@ -77,7 +75,7 @@ export class Dashboard extends Component {
         //리다이랙트 되면 logged, 아닐 경우 profilecard
         const setProfileCard = () => {
             if (this.props.githubAuth) {
-                return <GithubProfileCard user={this.props.currentUser} githubUser={this.props.githubInfo} />
+                return <GithubProfileCard user={this.props.user} githubUser={this.props.githubInfo} />
             }
             return <GithubLoginCard />
         }

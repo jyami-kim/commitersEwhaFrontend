@@ -13,7 +13,7 @@ const InfoTechRssPosts = ({posts, loading}) => {
                     <a href={post.link} target="_blank" rel="noreferrer" >
                     <div style = {{backgroundColor : post.color}} className ={styles.company}>{post.company}</div>
                     <div className ={styles.textTitle}>{post.title.length > 70 ? post.title.slice(0,30) : post.title}</div>
-                    <div style = {{color : post.color}} className ={styles.date}>2020.10.21</div>
+                    <div style = {{color : post.color}} className ={styles.date}>{post.date}</div>
                     </a>
                 </div>
             ))}

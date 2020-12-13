@@ -8,7 +8,8 @@ import MyCommitStat from '../components/myProfile/MyCommitStat'
 import UserInfo from '../components/myProfile/UserInfo'
 import { getCurrentGithubInfo, getCurrentUser } from '../api/APIUtils';
 import { ACCESS_TOKEN } from '../constants'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
+import LogoutLogo from '../assets/icon/myProfile/icon_logout@3x.png'
 
 
 class MyProfile extends Component {
@@ -17,6 +18,7 @@ class MyProfile extends Component {
         this.state = {
             selection: 0
         }
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
     componentDidMount() {
@@ -53,6 +55,17 @@ class MyProfile extends Component {
         }
     }
 
+    handleLogout() {
+        localStorage.removeItem(ACCESS_TOKEN);
+        this.props.saveAuth(false)
+        this.props.saveCurrentUser(null)
+        this.props.saveGithubAuth(false)
+        this.props.saveGithubInfo(null)
+        console.log("You're safely logged out!");
+        this.props.history.push("/")
+      }
+    
+
     render() {
         return (
             <div className={styles.container}>
@@ -60,6 +73,7 @@ class MyProfile extends Component {
                 <div className={styles.rowBox}>
                     <div className={styles.title}>MY PROFILE</div>
                     <Link to="/MyProfile/edit" className={styles.editProfile}>프로필 수정하기</Link>
+                    <div className={styles.logout} onClick={this.handleLogout}><img width="100%" src={LogoutLogo}></img></div>
                 </div>
                 <div className={styles.rowBox2}>
                     <div className={styles.nameBox}>

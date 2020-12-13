@@ -15,6 +15,8 @@ const initialState = {
     score: null,
     statHour: null,
     statWeekDay: null,
+    quarterRankList: [], // 사용X
+    weekRankList: [] // 사용X
 };
 
 const reducer = (state = initialState, action) => {
@@ -57,6 +59,14 @@ const reducer = (state = initialState, action) => {
         case actions.SAVE_WEEKDAY_STAT:
             return Object.assign({}, state, {
                 statWeekDay: action.payload
+            });
+        case actions.SAVE_QUARTER_RANK:
+            return Object.assign({}, state, {
+                quarterRankList: action.payload
+            });
+        case actions.SAVE_WEEK_RANK:
+            return Object.assign({}, state, {
+                weekRankList: action.payload
             });
         default:
             return state;

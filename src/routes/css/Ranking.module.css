@@ -1,0 +1,46 @@
+.rowMargin{
+    margin: 2rem 0rem;
+}
+.rowBox{
+    padding-bottom: 2rem;
+}
+.rankTitle{
+  font-size: 1rem;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00462a;
+}
+.titleItem{
+    flex: 7;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.scoreBox{
+    display : flex;
+    flex-direction: row;
+    width: 100%;
+    line-height: 3;
+    padding: 1rem 0rem;
+}
+.profile{
+    background-color: #ededed;
+    border: solid 1px #ffffff;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    vertical-align: middle;
+    margin:4px;
+    
+}
+.rank{
+    width: 2rem;
+    position: relative;
+    top: 15px;
+    right: 15px;
+}
