@@ -2,7 +2,7 @@
   "name": "commiters-frontend",
   "version": "0.1.5",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://ewha-commiters.herokuapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.2",
