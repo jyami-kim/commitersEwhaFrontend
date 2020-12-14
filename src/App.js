@@ -22,17 +22,17 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact path="/" component={DashboardContainer}></Route>
-          <Route path="/MyProfile/edit" component={MyProfileEditContainer}></Route>
-          <Route path="/MyProfile" component={MyProfileContainer} ></Route>
-          <Route path="/Ranking" component={RankingContainer} ></Route>
-          <Route path="/SideProject/post/:postId" component={SideProjectDetailContainer}></Route>
-          <Route path="/SideProject/form" component={SideProjectCreateContainer} ></Route>
-          <Route path="/SideProject" component={SideProjectContainer} ></Route>
-          <Route path="/TechRSS" component={TechRssContainer} ></Route>
+          <Route exact path="/MyProfile/edit" component={MyProfileEditContainer}></Route>
+          <Route exact path="/MyProfile" component={MyProfileContainer} ></Route>
+          <Route exact path="/Ranking" component={RankingContainer} ></Route>
+          <Route exact path="/SideProject/post/:postId" component={SideProjectDetailContainer}></Route>
+          <Route exact path="/SideProject/form" component={SideProjectCreateContainer} ></Route>
+          <Route exact path="/SideProject" component={SideProjectContainer} ></Route>
+          <Route exact path="/TechRSS" component={TechRssContainer} ></Route>
           {/* <Route path="/Community" component={Community} ></Route> */}
-          <Route path="/oauth2/redirect" component={OAuth2RedirectHandlerContainer} ></Route>
+          <Route exact path="/oauth2/redirect" component={OAuth2RedirectHandlerContainer} ></Route>
           {/* <Route path="/notification" component={Notification}></Route> */}
-          <Route path="/error" component={NotFound}></Route>
+          <Route exact path="/error" component={NotFound}></Route>
           
           <Route component={NotFound}></Route>
         </Switch>

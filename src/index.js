@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
@@ -15,7 +15,7 @@ const store = createStore(counterReducer);
 const rootElement = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL} >
       <App />
     </Router>
   </Provider>, rootElement
