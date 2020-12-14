@@ -29,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+
   },
   "eslintConfig": {
     "extends": [
@@ -51,5 +53,9 @@
   },
   "devDependencies": {
     "css-loader": "^5.0.1"
+  },
+  "engines": {
+    "node": "v14.6.0",
+    "npm":"6.x"
   }
 }
