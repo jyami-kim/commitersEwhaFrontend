@@ -73,6 +73,16 @@ export class Ranking extends Component {
 
     render() {
 
+        const nowDate = new Date();
+
+        function getWeekOfMonth(date){
+            var selectedDayOfMonth = date.getDate();
+            var first = new Date(date.getFullYear()+'/'+(date.getMonth()+1) + '/01');
+            var monthFirstDateDay = first.getDay();
+
+            return Math.ceil((selectedDayOfMonth + monthFirstDateDay) /7);
+        }
+
         return (
             <div className={subStyles.container}>
                 <Header seasonLogo={this.props.seasonLogo} sectionName="Ranking"></Header>
@@ -87,7 +97,10 @@ export class Ranking extends Component {
                         onClick={() => this.setState({ selection: 1 })}>주간 정원사</div>
                 </div>
                 <div className={styles.rowBox}>
-                    <div className={styles.rankTitle}>겨울 정원사</div>
+                    {this.state.selection === 0 ? 
+                    <div className={styles.rankTitle}>{nowDate.getFullYear()}년 {this.props.season} 정원사 ({this.props.seasonRange}월) </div>
+                    : <div className={styles.rankTitle}>{nowDate.getFullYear()}년 {nowDate.getMonth()+1}월 {getWeekOfMonth(nowDate)}주차 </div>}
+                    
 
                     <div className={infoStyles.columnBox}>
                         <div className={styles.scoreBox}>

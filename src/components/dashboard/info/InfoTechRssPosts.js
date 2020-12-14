@@ -1,14 +1,14 @@
 import React from 'react'
 import styles from './InfoTechRssPosts.module.css'
 
-const InfoTechRssPosts = ({posts, loading}) => {
+const InfoTechRssPosts = ({posts, props}) => {
     
-    if(loading){
+    if(!props.techRss){
         return (<h2>loading</h2>)
     }
     return (
         <div className = {styles.container}>
-            {posts.map(post => (
+            {props.techRss.rssFeedContents.map(post => (
                 <div key ={post.id} className = {styles.postCard}>
                     <a href={post.link} target="_blank" rel="noreferrer" >
                     <div style = {{backgroundColor : post.color}} className ={styles.company}>{post.company}</div>

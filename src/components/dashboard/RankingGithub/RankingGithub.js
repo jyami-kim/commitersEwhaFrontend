@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './RankingGithub.module.css'
+import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 import BlockWeather from './BlockWeather'
 import BlockWeek from './BlockWeek'
 import { getQuarterRanking, getWeekRanking } from '../../../api/APIRank'
-import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 
 
-//나중에 계절 파라미터로 받을 것
-const SEASON_TITLE = "가을 정원사 랭킹 (9월-11월)"
-const WEEK_TITLE = "10월 2주차 (2020.10.05 ~2020.10.11)"
-
-const RankingGithub = () => {
+const RankingGithub = ({quarter, week}) => {
 
     const [quarterBlocks, setQuarterBlocks] = useState([]);
     const [weekBlocks, setWeekBlocks] = useState([]);
@@ -62,7 +58,7 @@ const RankingGithub = () => {
 
             <div className={styles.subtitleText}>EWHA RANKING | Github</div>
             <div className={styles.rowBox}>
-                <div className={styles.rankingGithubText}>{SEASON_TITLE}</div>
+                <div className={styles.rankingGithubText}>{quarter}</div>
                 <Link to="/Ranking" className={styles.link}>
                     <div className={styles.more}>MORE</div>
                     <img src={arrow} alt="arrow" className={styles.arrow} />
@@ -70,10 +66,10 @@ const RankingGithub = () => {
             </div>
 
             <div className={styles.blocksContainer}>
-                <BlockWeather blocks={quarterBlocks} loading={loading} />
+                <BlockWeather  blocks={quarterBlocks} loading={loading} />
             </div>
             <div className={styles.rowBox2}>
-                <div className={styles.weekText}>{WEEK_TITLE}</div>
+                <div className={styles.weekText}>{week}</div>
                 <Link to="/Ranking" className={styles.link}>
                     <div className={styles.more}>MORE</div>
                     <img src={arrow} alt="arrow" className={styles.arrow} />

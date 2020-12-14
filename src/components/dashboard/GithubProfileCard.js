@@ -3,6 +3,9 @@ import './ProfileCard.css'
 import { getMyCommitMap } from '../../api/APIGithub'
 import { getMyRanking } from '../../api/APIRank'
 import CommitBox from './CommitBox';
+import { Link } from 'react-router-dom'
+import styles from '../../components/dashboard/RankingGithub/RankingGithub.module.css'
+import arrow from '../../assets/icon/myProfile/arrow@3x.png'
 
 export class GithubProfileCard extends Component {
 
@@ -71,7 +74,7 @@ export class GithubProfileCard extends Component {
                 <div className="info-detail-profile">{this.props.user && this.props.user.defaultMajor}</div>
                 <div className="profile-rowContainer">
                     <div className="itembox-profile">
-                        <div className="subtitle-profile">EWHA SCORE {this.state.rankScore != null ? this.state.rankScore.quarterRank.score : ''}</div>
+                        <div className="subtitle-profile">EWHA SCORE ({this.props.season && this.props.season})  : {this.state.rankScore != null ? this.state.rankScore.quarterRank.score : ''}</div>
                         <div className="profile-rowContainer-with-border">
                             <div className="profile-box-with-border">
                                 <div className="commit-profile">총 커밋</div>
@@ -82,6 +85,10 @@ export class GithubProfileCard extends Component {
                                 <div className="number-profile">{this.state.rankScore != null ? this.state.rankScore.quarterRank.commitMaxCombo : 0} 개</div>
                             </div>
                         </div>
+                        <Link to="/Ranking" className={styles.link} style={{margin: '1rem'}}>
+                            <div className={styles.more}>MORE</div>
+                            <img src={arrow} alt="arrow" className={styles.arrow} />
+                        </Link>
                     </div>
 
                     <div className="itembox2-profile">

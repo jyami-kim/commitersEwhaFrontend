@@ -10,6 +10,7 @@ const mapStateToProps = (state) => {
         season: state.season,
         seasonImage: state.seasonImage,
         seasonLogo: state.seasonLogo,
+        techRss: state.techRss
     };
 };
 

@@ -4,10 +4,6 @@ import {
   Switch
 } from 'react-router-dom';
 import NotFound from './components/NotFound'
-import Ranking from './routes/Ranking'
-import SideProject from './routes/SideProject'
-import TechRSS from './routes/TechRSS'
-import Community from './routes/Community'
 import './App.css';
 import DashboardContainer from './store/DashboardContainer';
 import OAuth2RedirectHandlerContainer from './store/OAuth2RedirectHandlerContainer';
@@ -15,6 +11,9 @@ import MyProfileEditContainer from './store/MyProfileEditContainer';
 import MyProfileContainer from './store/MyProfileContainer';
 import RankingContainer from './store/RankingContainer'
 import TechRssContainer from './store/TechRSSContainer'
+import SideProjectContainer from './store/SideProjectContainer';
+import SideProjectCreateContainer from './store/SideProjectCreateContainer';
+import SideProjectDetailContainer from './store/SideProjectDetailContainer';
 
 class App extends Component {
 
@@ -26,9 +25,11 @@ class App extends Component {
           <Route path="/MyProfile/edit" component={MyProfileEditContainer}></Route>
           <Route path="/MyProfile" component={MyProfileContainer} ></Route>
           <Route path="/Ranking" component={RankingContainer} ></Route>
-          <Route path="/SideProject" component={SideProject} ></Route>
+          <Route path="/SideProject/post/:postId" component={SideProjectDetailContainer}></Route>
+          <Route path="/SideProject/form" component={SideProjectCreateContainer} ></Route>
+          <Route path="/SideProject" component={SideProjectContainer} ></Route>
           <Route path="/TechRSS" component={TechRssContainer} ></Route>
-          <Route path="/Community" component={Community} ></Route>
+          {/* <Route path="/Community" component={Community} ></Route> */}
           <Route path="/oauth2/redirect" component={OAuth2RedirectHandlerContainer} ></Route>
           {/* <Route path="/notification" component={Notification}></Route> */}
           <Route path="/error" component={NotFound}></Route>

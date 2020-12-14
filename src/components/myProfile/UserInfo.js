@@ -108,7 +108,10 @@ class UserInfo extends Component {
                             {user && user.badges.map((obj, i) => {
                                 return (
                                     <div id={i} className={styles.badgeContainer}>
-                                        <div className={styles.badge} style={obj.image && {backgroundImage: "url(" + obj.image + ")"}} />
+                                        {obj.image ? 
+                                        <div className={styles.badge} style={{backgroundImage: "url(" + obj.image + ")"}}></div> :
+                                        <div className={styles.badge}></div>}
+                                        
                                         <p className={styles.badgeText}>{obj.title}</p>
                                     </div>)
                             })}

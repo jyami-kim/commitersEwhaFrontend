@@ -16,6 +16,7 @@ export const SAVE_HOUR_STAT = "SAVE_HOUR_STAT";
 export const SAVE_WEEKDAY_STAT = "SAVE_WEEKDAY_STAT";
 export const SAVE_WEEK_RANK = "SAVE_WEEK_RANK";
 export const SAVE_QUARTER_RANK = "SAVE_QUARTER_RANK";
+export const SAVE_TECH_RSS = "SAVE_TECH_RSS";
 
 
 export function saveStore(type, value){
@@ -32,21 +33,24 @@ export function saveSeason() {
             type: SEASON,
             season: '봄',
             seasonImage: springText,
-            seasonLogo: springLogo
+            seasonLogo: springLogo,
+            seasonRange: '3~5'
         }
     } else if (month >= 6 && month <= 8) {
         return {
             type: SEASON,
             season: '여름',
             seasonImage: summerText,
-            seasonLogo: summerLogo
+            seasonLogo: summerLogo,
+            seasonRange: '6~8',
         }
     } else if (month = 9 || month <= 11) {
         return {
             type: SEASON,
             season: '가을',
             seasonImage: fallText,
-            seasonLogo: fallLogo
+            seasonLogo: fallLogo,
+            seasonRange: '9~11',
         }
     } 
 }

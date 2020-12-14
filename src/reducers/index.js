@@ -9,6 +9,7 @@ const initialState = {
     season: '겨울',
     seasonLogo: winterLogo,
     seasonImage: winterText,
+    seasonRange: '12~2',
     githubInfo: null,
     githubAuth: false,
     commitMap: null,
@@ -16,7 +17,8 @@ const initialState = {
     statHour: null,
     statWeekDay: null,
     quarterRankList: [], // 사용X
-    weekRankList: [] // 사용X
+    weekRankList: [], // 사용X
+    techRss: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -34,7 +36,8 @@ const reducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 season: action.season,
                 seasonImage: action.seasonImage,
-                seasonLogo: action.seasonLogo
+                seasonLogo: action.seasonLogo,
+                seasonRange: action.seasonRange
             });
         case actions.GITHUB_AUTH:
             return Object.assign({}, state, {
@@ -67,6 +70,10 @@ const reducer = (state = initialState, action) => {
         case actions.SAVE_WEEK_RANK:
             return Object.assign({}, state, {
                 weekRankList: action.payload
+            });
+        case actions.SAVE_TECH_RSS:
+            return Object.assign({}, state, {
+                techRss: action.payload
             });
         default:
             return state;

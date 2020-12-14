@@ -1,0 +1,211 @@
+.container{
+    width : 80%;
+    height: 100%;
+    display : flex;
+    flex-direction: column;
+    margin: 0em auto;
+    margin-bottom:7.75rem;
+    align-items: left;
+}
+
+
+.subtitle{
+    margin: auto;
+    font-family: AcuminProWide;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00462a;
+}
+.inputTitle{
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+}
+.rowBox{
+    margin: 1rem 0rem;
+    
+    font-family: AppleSDGothicNeo;
+    font-size: 1.75em;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+    display : flex;
+    flex-direction : row;
+}
+.columnBox{
+    margin: 1rem 0rem;
+    font-family: AppleSDGothicNeo;
+    font-size: 1.75em;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #151515;
+    display : flex;
+    flex-direction : column;
+    margin-bottom: 2rem;
+}
+.line{    
+    border-bottom: solid 0.063rem #e0e0e0;
+    width: 90%;
+}
+
+.linkBox{
+    display: flex;
+    flex-direction: row;
+}
+.linkTitle{
+    font-size: 16px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00462a;
+    flex: 1;
+    text-align: left;
+}
+.button{
+    width: 10rem;
+    margin: auto;
+    height: 1.4rem;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  margin-right: 6rem;
+  border: solid 1px #00462a;
+  background-color: #5f8276;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.smallButton{
+    margin: auto;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  margin-right: 4rem;
+  border: solid 1px #00462a;
+  background-color: #5f8276;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.inputItem{
+    font-size: 14px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #888888;
+}
+.smallHighlight{
+    font-family: AppleSDGothicNeo;
+    font-size: 8px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #00462a;
+}
+.create{
+    margin-top: 2rem;
+    padding: 0.5rem;
+    margin-right: 6rem;
+    border-radius: 1rem;
+    border: solid 0.063rem #5f8276;
+    font-family: AppleSDGothicNeo;
+    font-size: 0.8rem;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #5f8276;
+    background-color: white;
+    cursor: pointer;
+}
+.readme{
+    padding: 1rem;
+    width: 90%;
+    height: 20rem;
+    border: solid 0.1rem #f0f0f0;
+    font-size: 15px;
+    overflow: scroll;
+}
+.image{
+    width: 90%;
+    min-height: 20rem;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.largeInput{
+    padding: 2rem 0rem;
+}
+.middleInput{
+    padding: 1rem 0rem;
+}
+
+.input{
+    border: none;
+    width: 90%;
+    line-height: 1.21;
+    text-align: left;
+}
+
+.input[type="text"] {
+    border: 0px;
+    outline: none;
+}
+.input[type="text"]:focus { 
+    border-bottom: solid 2px #5f8276;
+}
+
+input[type=checkbox]{
+    margin: auto 1rem;
+    cursor: pointer;
+}
+
+input[type=checkbox]{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #f7f7f7;
+    border-radius: 2px;
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}
+
+input[type=checkbox]:checked{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 18px; 
+    font-weight:600; 
+    color: #fff;  
+    background-color:#5f8276;
+    text-align: center;   
+}

@@ -6,7 +6,7 @@
 .postContainer{
     display: flex;
     flex-direction: row;
-   
+   margin: 1rem 0rem;
 }
 
 .postContainerBottom{
@@ -20,12 +20,18 @@
     display: flex;
     flex-direction: row;
 }
+.icon{
+    width:1.4rem;
+}
 .preview{
     width: 13em;
     height: 8.0625em;
     /*margin: 12px 20px 36px 276px;*/
     border-radius: 0.625em;
     background-color: #f0f0f0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 .itemBox{
     width : 100%;
@@ -66,7 +72,7 @@
 .postDetail{
     font-family: AppleSDGothicNeo;
     font-size: 0.75rem;
-    margin : 0.5rem auto auto 1.25rem;
+    margin : 0.5rem auto 1rem 1.25rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;

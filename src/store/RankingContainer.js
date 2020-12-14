@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
         season: state.season,
         seasonImage: state.seasonImage,
         seasonLogo: state.seasonLogo,
+        seasonRange: state.seasonRange,
         // quarterRankList: [],
         // weekRankList: []
     };

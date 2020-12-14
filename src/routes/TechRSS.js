@@ -10,7 +10,6 @@ export class TechRSS extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mockData: json,
             page: 0,
             click: null
         };
@@ -33,8 +32,13 @@ export class TechRSS extends Component {
 
     render() {
 
-        const dataToRender = this.state.mockData.rssFeedContents.filter(data => this.state.click == null || data.company == this.state.click)
-        const pageIndex = Math.ceil(dataToRender.length/10)
+
+        if(!this.props.techRss){
+            return(<h1>loading</h1>)
+        }
+
+        // const dataToRender = this.state.mockData.rssFeedContents.filter(data => this.state.click == null || data.company == this.state.click)
+        // const pageIndex = Math.ceil(dataToRender.length/10)
 
         return (
             <div className = "main-container">
@@ -48,7 +52,7 @@ export class TechRSS extends Component {
                             <span>Category</span>
                         </div>
                         <div>
-                            {this.state.mockData.rssFeedInfos.map((data, i) => {
+                            {this.props.techRss.rssFeedInfos.map((data, i) => {
                                 if(this.state.click == data.company){
                                     return (
                                         <div 
@@ -70,7 +74,9 @@ export class TechRSS extends Component {
                             })}
                         </div>
                         <div className= "card-container">
-                            {dataToRender.slice(this.state.page*10, (this.state.page+1) *10)
+                            {this.props.techRss.rssFeedContents
+                            .filter(data => this.state.click == null || data.company == this.state.click)
+                            .slice(this.state.page*10, (this.state.page+1) *10)
                             .map((data, i) => {
                                 return (<RssBlock 
                                     color = {data.color} 
@@ -83,8 +89,9 @@ export class TechRSS extends Component {
                             })}
                         </div>
                    </div>
-                   <div className = "pagenation">    
-                        {[...Array(pageIndex)].map((n, index) => {
+                   <div className = "pagenation">
+                        {[...Array(Math.ceil(this.props.techRss.rssFeedContents.filter(data => this.state.click == null || data.company == this.state.click)
+                            .length/10))].map((n, index) => {
                             if(index == this.state.page){
                                 return (
                                 <div onClick={this.page.bind(this, index)} 

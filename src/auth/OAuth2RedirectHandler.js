@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ACCESS_TOKEN } from '../constants';
 import { Redirect } from 'react-router-dom'
+import { saveNewCommitersInfo } from '../api/APIGithub'
 
 class OAuth2RedirectHandler extends Component {
 
@@ -25,6 +26,13 @@ class OAuth2RedirectHandler extends Component {
                 state: { from: this.props.location }
             }} />;
         } if (githubToken) {
+            saveNewCommitersInfo()
+                .then(res=>{
+                    console.log(res)
+                })
+                .catch(error => {
+                    console.log(error)
+                })
             return <Redirect to={{
                 pathname: "/",
                 state: { from: this.props.location }

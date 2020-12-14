@@ -12,12 +12,17 @@ const CommunitySideProject = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [postPerPage] = useState(4);
 
+    
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
             const res = getDashboardProjectPost().then(res => {
                 console.log(res.response);
-                setPosts(res.response.content);
+                const content = res.response.content
+                let postsMap =[]
+                postsMap.push(content.slice(0,2));
+                postsMap.push(content.slice(2));
+                setPosts(postsMap);
                 setLoading(false);
             })
             .catch(error => {
@@ -26,6 +31,7 @@ const CommunitySideProject = () => {
         }
         fetchPosts();
     },[]);
+
     return (
        <div className = {styles.container}>
             <div className = {styles.titleText}>EWHA COMMUNITY | Side Project
@@ -34,7 +40,7 @@ const CommunitySideProject = () => {
                     <img src={arrow} alt="arrow" className ={styles.arrow}/>
                 </Link>
             </div>
-            {/* <CommunitySideProjectPosts posts = {posts} loading ={loading} /> */}
+            <CommunitySideProjectPosts posts = {posts} loading ={loading} />
         </div>
     )
 }

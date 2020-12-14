@@ -6,23 +6,9 @@ import {Link} from 'react-router-dom'
 import arrow from '../../../assets/icon/myProfile/arrow@3x.png'
 import {getAllRssWithPage } from '../../../api/APIRss'
 
-const InfoTechRss = () => {
-    const [posts , setPosts] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            setLoading(true);
-            const res = getAllRssWithPage().then(res => {
-                setPosts(res.response.rssFeedContents);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-        }
-        fetchPosts();
-    },[]);
+const InfoTechRss = ({props}) => {
+    
+    console.log(props)
     return (
        <div className = {styles.container}>
             <div className = {styles.titleText}>EWHA INFO | Tech Rss
@@ -31,7 +17,7 @@ const InfoTechRss = () => {
                     <img src={arrow} alt="arrow" className ={styles.arrow}/>
                 </Link>
             </div>
-            <InfoTechRssPosts posts = {posts} loading ={loading} />
+            <InfoTechRssPosts props = {props} />
         </div>
     )
 }

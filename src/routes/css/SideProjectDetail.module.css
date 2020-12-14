@@ -1,0 +1,159 @@
+.container{
+    width : 80%;
+    height: 100%;
+    display : flex;
+    flex-direction: column;
+    margin: 0em auto;
+    margin-bottom:7.75rem;
+    align-items: left;
+}
+
+.columnBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.rowBox{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.title{
+    font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #151515;
+}
+.itemName{
+    font-size: 12px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5f8276;
+    margin: 1rem 0.6rem;
+}
+.line{
+    width: 50%;
+    border: solid 1px #d5d5d5
+}
+.lineSmall{
+    width: 100%;
+    border: solid 1px #d5d5d5
+}
+.side{
+    padding: 0rem 0rem 0rem 5rem;
+}
+.itemDetail{
+    font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #151515;
+  margin: 1rem 0.6rem;
+  width: 100%;
+  overflow:auto
+}
+.readmeBox{
+    border: solid 0.5px #d5d5d5;
+    border-radius: 1rem;
+    min-height: 20rem;
+    overflow: scroll;
+    padding: 1rem;
+    width: 45rem;
+}
+.userProfile{
+    border: solid 1px #d5d5d5;
+    background-color: #ededed;
+    width: 3rem;
+    background-size: 3rem;
+    border-radius: 3rem;
+}
+.userInfo{
+    margin: 1rem 0rem;
+}
+.delete{
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #888888;
+    text-align: right;
+    cursor: pointer;
+}
+.sideTitle{
+    font-size: 12px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2b2b2b;
+  padding: 0rem 0.5rem;
+}
+.badgeBox{
+    display: inline-flex;
+    min-height: 2rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    flex-flow: wrap;
+    display: flex;
+}
+.linkButton{
+    width: 60%;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+}
+.hash{
+    font-size: 0.875rem;
+    font-weight: bold;
+    font-stretch: normal;
+    color: #00462a;
+}
+.tag{
+    margin: 0.3rem;
+    padding: 0.313rem 0.625rem;
+    border-radius: 5px;
+    border: solid 1px #00462a;
+    background-color: #5f8276;
+  
+    font-family: AppleSDGothicNeo;
+    font-size: 0.875rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+  .sideTitle2{
+    font-size: 12px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #888888;   
+    padding: 0rem 0.5rem;
+    margin-top: 4rem;
+  }
+  .youtube{
+    padding: 2rem;
+  }
