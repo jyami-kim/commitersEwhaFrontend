@@ -15,7 +15,7 @@ const store = createStore(counterReducer);
 const rootElement = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <App />
     </Router>
   </Provider>, rootElement
