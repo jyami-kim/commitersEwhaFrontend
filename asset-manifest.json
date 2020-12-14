@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/commitersEwhaFrontend/static/css/main.a5dbdbf9.chunk.css",
+    "main.js": "/commitersEwhaFrontend/static/js/main.a118e9fc.chunk.js",
+    "main.js.map": "/commitersEwhaFrontend/static/js/main.a118e9fc.chunk.js.map",
+    "runtime-main.js": "/commitersEwhaFrontend/static/js/runtime-main.3375fc57.js",
+    "runtime-main.js.map": "/commitersEwhaFrontend/static/js/runtime-main.3375fc57.js.map",
+    "static/js/2.d539b0ea.chunk.js": "/commitersEwhaFrontend/static/js/2.d539b0ea.chunk.js",
+    "static/js/2.d539b0ea.chunk.js.map": "/commitersEwhaFrontend/static/js/2.d539b0ea.chunk.js.map",
+    "index.html": "/commitersEwhaFrontend/index.html",
+    "static/css/main.a5dbdbf9.chunk.css.map": "/commitersEwhaFrontend/static/css/main.a5dbdbf9.chunk.css.map",
+    "static/js/2.d539b0ea.chunk.js.LICENSE.txt": "/commitersEwhaFrontend/static/js/2.d539b0ea.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/commitersEwhaFrontend/static/media/AppleSDGothicNeoM.88c00162.ttf",
+    "static/media/badge_winter_bronze_60@3x.d612643d.png": "/commitersEwhaFrontend/static/media/badge_winter_bronze_60@3x.d612643d.png",
+    "static/media/bt_github.c6c969a6.png": "/commitersEwhaFrontend/static/media/bt_github.c6c969a6.png",
+    "static/media/bt_google_play.8ab2ce85.png": "/commitersEwhaFrontend/static/media/bt_google_play.8ab2ce85.png",
+    "static/media/bt_webiste.a75222de.png": "/commitersEwhaFrontend/static/media/bt_webiste.a75222de.png",
+    "static/media/button_google@3x.0964f836.png": "/commitersEwhaFrontend/static/media/button_google@3x.0964f836.png",
+    "static/media/logo_fall@3x.a5854edd.png": "/commitersEwhaFrontend/static/media/logo_fall@3x.a5854edd.png",
+    "static/media/logo_landing.4eef2476.gif": "/commitersEwhaFrontend/static/media/logo_landing.4eef2476.gif",
+    "static/media/logo_spring@3x.01e714fa.png": "/commitersEwhaFrontend/static/media/logo_spring@3x.01e714fa.png",
+    "static/media/logo_summer@3x.c6000e2d.png": "/commitersEwhaFrontend/static/media/logo_summer@3x.c6000e2d.png",
+    "static/media/logo_winter@3x.9efd5932.png": "/commitersEwhaFrontend/static/media/logo_winter@3x.9efd5932.png",
+    "static/media/main_text_fall@3x.603b44f2.png": "/commitersEwhaFrontend/static/media/main_text_fall@3x.603b44f2.png",
+    "static/media/main_text_summer@3x.bea9da95.png": "/commitersEwhaFrontend/static/media/main_text_summer@3x.bea9da95.png",
+    "static/media/main_text_winter@3x.d390f218.png": "/commitersEwhaFrontend/static/media/main_text_winter@3x.d390f218.png",
+    "static/media/signin_text@3x.38f324d3.png": "/commitersEwhaFrontend/static/media/signin_text@3x.38f324d3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3375fc57.js",
+    "static/js/2.d539b0ea.chunk.js",
+    "static/css/main.a5dbdbf9.chunk.css",
+    "static/js/main.a118e9fc.chunk.js"
+  ]
+}
